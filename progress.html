@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Progress Insights - My Reset HQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fff8f4",
+                        "on-tertiary-fixed-variant": "#4d415f",
+                        "on-primary-container": "#744654",
+                        "primary-fixed": "#ffd9e2",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#cbe7c7",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e8e1dd",
+                        "primary-container": "#f4b8c8",
+                        "on-secondary-container": "#50694f",
+                        "on-tertiary-container": "#5a4e6c",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#655978",
+                        "inverse-surface": "#33302d",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fff8f4",
+                        "outline-variant": "#d4c2c5",
+                        "tertiary-fixed-dim": "#d0c0e4",
+                        "primary": "#80515f",
+                        "inverse-primary": "#f2b6c6",
+                        "on-background": "#1d1b19",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ecdcff",
+                        "secondary-fixed-dim": "#b2ceae",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f9f2ee",
+                        "on-surface": "#1d1b19",
+                        "on-secondary-fixed": "#09200c",
+                        "secondary": "#4c654b",
+                        "on-secondary-fixed-variant": "#354d34",
+                        "surface-container-highest": "#e8e1dd",
+                        "on-tertiary-fixed": "#211631",
+                        "on-primary-fixed-variant": "#653a47",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eee7e3",
+                        "surface-container": "#f3ede9",
+                        "outline": "#827376",
+                        "tertiary-container": "#d2c2e6",
+                        "on-primary-fixed": "#320f1c",
+                        "primary-fixed-dim": "#f2b6c6",
+                        "surface-tint": "#80515f",
+                        "background": "#fff8f4",
+                        "on-surface-variant": "#504446",
+                        "surface-dim": "#dfd9d5",
+                        "secondary-fixed": "#ceeac9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "unit": "4px",
+                        "gutter": "16px",
+                        "container-padding": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Nunito Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-md": ["Nunito Sans"],
+                        "label-md": ["Nunito Sans"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "body-lg": ["Nunito Sans"],
+                        "display-lg": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fff8f4;
+            color: #1d1b19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid rgba(61, 40, 40, 0.08);
+            border-radius: 16px;
+        }
+        .heatmap-cell {
+            aspect-ratio: 1 / 1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f4b8c8;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<header class="bg-background dark:bg-background flex items-center justify-center w-full px-margin-desktop py-6 max-w-[1024px] mx-auto sticky top-0 z-40 transition-all duration-200">
+<div class="flex items-center justify-between w-full">
+<h1 class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim italic">My Reset HQ</h1>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="index.html">Dashboard</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="weekly.html">Weekly</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="wellness.html">Wellness</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="work.html">Work</a>
+<a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity" href="progress.html">Progress</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2">notifications</button>
+<div class="w-10 h-10 rounded-full bg-primary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a woman with a serene expression, softly lit by morning sunlight. The aesthetic is clean and professional, matching the soft pink and cream palette of a wellness application. The lighting is high-key and restorative, emphasizing a calm and healthy lifestyle in a minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6PAVTofNoXmOgohAtuxrC0CXGYR9ei6QCHh9F102IN1rXDpI6REwHcrDY0032HaGf9CRJ3ed6FdROkb06MFlNQs3MFcTiGTFwTIMGYAL6-lCWGNMS3yQP9iD9WMC2r85U0tsD6uCwPaT8VvuYYpFJ8gJLoleWA980QUoHbuZ-BRvsm39oGsB0jYnqbaBJNj10Nn9Xis0sNHlabGuKTkD6yLpZU3rFqW0ndVNtPzZA-dW-guyIXw8CfARHVEJXkVROjOwfuRmdHgk2">
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1024px] mx-auto px-margin-desktop pb-32 pt-4">
+<!-- Header Section -->
+<div class="mb-10">
+<h2 class="font-display-lg text-display-lg text-primary mb-2">Progress Insights</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Your journey to a more balanced self, visualized through soft data and quiet reflection.</p>
+</div>
+<!-- Summary Grid -->
+<div class="grid grid-cols-4 gap-6 mb-10">
+<div class="glass-card p-6 flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-md text-label-md">Today %</span>
+<div class="mt-4">
+<span class="font-display-lg text-display-lg text-primary">85%</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-2">
+<div class="h-full bg-primary-container rounded-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-md text-label-md">This Week %</span>
+<div class="mt-4">
+<span class="font-display-lg text-display-lg text-primary">72%</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-2">
+<div class="h-full bg-secondary-fixed-dim rounded-full w-[72%]"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-md text-label-md">Current Streak</span>
+<div class="mt-4 flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary">12</span>
+<span class="font-label-md text-label-md text-on-surface-variant">days</span>
+</div>
+<div class="text-on-secondary-fixed-variant text-label-sm font-label-sm mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    Keep it up!
+                </div>
+</div>
+<div class="glass-card p-6 flex flex-col justify-between">
+<span class="text-on-surface-variant font-label-md text-label-md">Best Streak</span>
+<div class="mt-4 flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary">24</span>
+<span class="font-label-md text-label-md text-on-surface-variant">days</span>
+</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm mt-2">Last achieved Oct 14</div>
+</div>
+</div>
+<!-- Main Analytics Bento -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Weekly Momentum Chart -->
+<div class="col-span-8 glass-card p-container-padding">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Weekly Momentum</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Consistency across all categories</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-label-sm font-label-md">Daily</button>
+<button class="bg-surface-variant text-on-surface-variant px-4 py-1 rounded-full text-label-sm font-label-md">Weekly</button>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-4">
+<!-- Placeholder Chart Bars -->
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[40%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[60%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mon</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[65%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[80%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tue</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[30%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[45%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wed</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[90%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[95%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Thu</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[50%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[70%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fri</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[40%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[20%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sat</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg relative h-[25%]">
+<div class="absolute bottom-0 w-full bg-primary-container rounded-t-lg h-[30%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sun</span>
+</div>
+</div>
+</div>
+<!-- Categories Breakdown -->
+<div class="col-span-4 glass-card p-container-padding">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Categories</h3>
+<div class="space-y-6">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md text-on-surface">Wellness</span>
+<span class="font-label-sm text-label-sm text-primary">92%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full">
+<div class="h-full bg-secondary-fixed-dim rounded-full w-[92%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md text-on-surface">Journaling</span>
+<span class="font-label-sm text-label-sm text-primary">64%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full">
+<div class="h-full bg-primary-container rounded-full w-[64%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md text-on-surface">Work Focus</span>
+<span class="font-label-sm text-label-sm text-primary">78%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full">
+<div class="h-full bg-tertiary-fixed-dim rounded-full w-[78%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md text-on-surface">Movement</span>
+<span class="font-label-sm text-label-sm text-primary">45%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full">
+<div class="h-full bg-outline-variant rounded-full w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Consistency Map (Heat Map) -->
+<div class="col-span-8 glass-card p-container-padding">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Consistency Map</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Your activity over the last 90 days</p>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="">Less</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 bg-surface-variant rounded-sm"></div>
+<div class="w-3 h-3 bg-primary-container/40 rounded-sm"></div>
+<div class="w-3 h-3 bg-primary-container/70 rounded-sm"></div>
+<div class="w-3 h-3 bg-primary-container rounded-sm"></div>
+</div>
+<span class="">More</span>
+</div>
+</div>
+<!-- Heatmap Grid -->
+<div class="grid grid-flow-col grid-rows-7 gap-2 overflow-x-auto custom-scrollbar pb-2">
+<!-- Column 1-15 Placeholder cells -->
+<script>
+                        const container = document.currentScript.parentElement;
+                        const intensities = ['bg-surface-variant', 'bg-primary-container/30', 'bg-primary-container/60', 'bg-primary-container'];
+                        for (let i = 0; i < 126; i++) {
+                            const intensity = intensities[Math.floor(Math.random() * intensities.length)];
+                            const div = document.createElement('div');
+                            div.className = `heatmap-cell w-6 ${intensity}`;
+                            container.appendChild(div);
+                        }
+                    </script><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div><div class="heatmap-cell w-6 bg-primary-container/30"></div><div class="heatmap-cell w-6 bg-surface-variant"></div><div class="heatmap-cell w-6 bg-primary-container/60"></div>
+</div>
+</div>
+<!-- 8-Week Trend & Needs Attention -->
+<div class="col-span-4 flex flex-col gap-6">
+<!-- 8-Week Trend Sparkline Card -->
+<div class="glass-card p-container-padding flex-1">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-4">8-Week Trend</h3>
+<div class="h-20 flex items-end gap-1">
+<!-- SVG Sparkline Placeholder -->
+<svg class="w-full h-full text-primary" preserveAspectRatio="none" viewBox="0 0 100 30">
+<path d="M0,25 Q10,5 20,20 T40,10 T60,25 T80,5 T100,15" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+</svg>
+</div>
+<div class="flex justify-between mt-4">
+<div class="text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Average</p>
+<p class="font-headline-md text-headline-md text-primary">68%</p>
+</div>
+<div class="text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Growth</p>
+<p class="font-headline-md text-headline-md text-secondary">+12%</p>
+</div>
+</div>
+</div>
+<!-- Needs Attention Card -->
+<div class="glass-card p-container-padding flex-1">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-4">Needs Attention</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-primary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Journaling</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">2/7 days complete</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-primary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">self_improvement</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Yoga Sessions</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">1/3 sessions complete</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quote / Decorative Element -->
+<div class="mt-12 text-center max-w-lg mx-auto">
+<p class="font-display-lg-mobile text-display-lg-mobile text-primary-container opacity-60 italic mb-2">"Small steps everyday."</p>
+<p class="text-on-surface-variant font-body-md text-body-md italic">Progress is not a straight line, but a series of gentle returns to your intention.</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (For Tablet/Mobile) -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] flex justify-around items-center px-gutter py-4 bg-surface/90 dark:bg-surface-container/90 z-50 backdrop-blur-md border-t border-on-surface/5 md:hidden">
+<a href="index.html" class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined">home</span><span class="font-label-sm text-label-sm">Dashboard</span></a>
+<a href="weekly.html" class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined">calendar_month</span><span class="font-label-sm text-label-sm">Weekly</span></a>
+<a href="wellness.html" class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined">Leaf</span><span class="font-label-sm text-label-sm">Wellness</span></a>
+<a href="work.html" class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined">work</span><span class="font-label-sm text-label-sm">Work</span></a>
+<a href="progress.html" class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/30 rounded-xl px-4 py-1 hover:text-primary/70 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bar_chart</span><span class="font-label-sm text-label-sm">Progress</span></a>
+</nav>
+
+
+</body></html>

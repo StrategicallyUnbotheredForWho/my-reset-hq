@@ -1,0 +1,430 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dashboard - My Reset HQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#50694f",
+                        "secondary-fixed-dim": "#b2ceae",
+                        "outline-variant": "#d4c2c5",
+                        "on-background": "#3d2828",
+                        "primary-container": "#f4b8c8",
+                        "surface": "#fff8f4",
+                        "background": "#fff8f4",
+                        "surface-container-high": "#eee7e3",
+                        "on-primary-fixed-variant": "#653a47",
+                        "surface-bright": "#fff8f4",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#354d34",
+                        "tertiary": "#655978",
+                        "secondary-fixed": "#ceeac9",
+                        "on-primary-fixed": "#320f1c",
+                        "on-secondary-fixed": "#09200c",
+                        "primary-fixed": "#ffd9e2",
+                        "secondary": "#4c654b",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f9f2ee",
+                        "on-tertiary-fixed": "#211631",
+                        "primary": "#80515f",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#3d2828",
+                        "inverse-surface": "#33302d",
+                        "surface-container-highest": "#e8e1dd",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#744654",
+                        "surface-container": "#f3ede9",
+                        "inverse-primary": "#f2b6c6",
+                        "secondary-container": "#cbe7c7",
+                        "on-error": "#ffffff",
+                        "outline": "#827376",
+                        "on-surface-variant": "#504446",
+                        "tertiary-fixed-dim": "#d0c0e4",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#f2b6c6",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4d415f",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-tint": "#80515f",
+                        "on-tertiary-container": "#5a4e6c",
+                        "surface-variant": "#e8e1dd",
+                        "surface-dim": "#dfd9d5",
+                        "tertiary-fixed": "#ecdcff",
+                        "tertiary-container": "#d2c2e6",
+                        "custom-lavender": "#d4c4e8",
+                        "custom-sage": "#b8d4b4",
+                        "custom-blue": "#b8ccf0",
+                        "custom-peach": "#f0cca8",
+                        "custom-pistachio": "#d4e8b8",
+                        "deep-brown": "#3d2828"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "16px",
+                        "container-padding": "40px",
+                        "unit": "4px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Epilogue"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "cursive": ["Great Vibes", "cursive"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            color: #3d2828;
+        }
+        .checkbox-custom:checked + label {
+            text-decoration: line-through;
+            opacity: 0.4;
+        }
+        .checkbox-custom {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid rgba(61, 40, 40, 0.15);
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            background-color: white;
+        }
+        .checkbox-custom:checked {
+            background-color: #f4b8c8;
+            border-color: #f4b8c8;
+        }
+        .checkbox-custom:checked::after {
+            content: 'check';
+            font-family: 'Material Symbols Outlined';
+            font-size: 14px;
+            color: #3d2828;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .habit-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 9999px;
+            border: 1px solid rgba(61, 40, 40, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        @media (min-width: 768px) {
+            .habit-circle {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .habit-circle.active {
+            background-color: #b8d4b4;
+            border-color: #b8d4b4;
+            transform: scale(1.05);
+        }
+        .tagline {
+            font-variant: small-caps;
+            letter-spacing: 0.2em;
+        }
+        .standard-container {
+            max-width: 960px; /* Reduced for natural iPad feeling */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media (min-width: 768px) {
+            .standard-container {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .standard-container {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-deep-brown font-body-md min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="w-full bg-background pt-6 pb-4 md:pt-8 md:pb-4 sticky top-0 z-30">
+<div class="standard-container">
+<div class="flex flex-col items-center w-full">
+<div class="flex justify-between items-center w-full mb-4">
+<div class="text-deep-brown/60 font-label-md text-[13px] md:text-[14px] font-semibold w-32 hidden sm:block">Monday, Oct 23</div>
+<h1 class="font-cursive text-[36px] md:text-[48px] text-primary flex-1 text-center">My Reset HQ</h1>
+<div class="w-32 flex justify-end">
+<button class="bg-primary-container text-deep-brown px-4 md:px-6 py-2 rounded-full font-label-md text-[13px] md:text-[14px] font-semibold hover:opacity-80 transition-opacity shadow-sm whitespace-nowrap">Daily Reset</button>
+</div>
+</div>
+<p class="tagline text-[10px] md:text-[11px] font-bold opacity-60 text-center">soft reset • wellness • structure • peace</p>
+</div>
+</div>
+</header>
+<main class="flex-grow standard-container py-6 md:py-8 space-y-gutter">
+<!-- Grid: Optimized for iPad (2 columns at tablet, 3 at desktop) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- TODAY Card -->
+<div class="bg-primary-container p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Today</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t1">Water</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t2">Protein Breakfast</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t3">Bible/Devotion</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t4">Workout/Walk</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t5" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t5">Skincare &amp; Dental</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="t6" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t6">Top 3 Tasks</label>
+</li>
+</ul>
+</div>
+<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Progress, not perfection</p>
+</div>
+<!-- MIND & MOOD -->
+<div class="bg-custom-lavender p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Mind &amp; Mood</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="m1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m1">Mood Check</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="m2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m2">Therapy Notes</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="m3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m3">Journal Entry</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="m4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m4">Safe Friend Check-in</label>
+</li>
+</ul>
+</div>
+</div>
+<!-- BODY & HEALTH -->
+<div class="bg-custom-sage p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Body &amp; Health</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="b1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b1">Meals &amp; Protein</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="b2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b2">Exercise</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="b3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b3">Weight Maintenance</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="b4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b4">Haircare Routine</label>
+</li>
+</ul>
+</div>
+</div>
+<!-- WORK + GOALS -->
+<div class="bg-custom-blue p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Work + Goals</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="w1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w1">Top 3 Work Tasks</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="w2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w2">One Study Task</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="w3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w3">Check Deadlines</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="w4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w4">Admin Tasks</label>
+</li>
+</ul>
+</div>
+<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Focus on what moves the needle</p>
+</div>
+<!-- RESET ROUTINES -->
+<div class="bg-custom-peach p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Reset Routines</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="r1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r1">Morning Reset</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="r2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r2">Evening Reset</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="r3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r3">Sunday Reset</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="r4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r4">Digital Declutter</label>
+</li>
+</ul>
+</div>
+<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Routines create freedom</p>
+</div>
+<!-- SOCIAL & PEACE -->
+<div class="bg-custom-pistachio p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div>
+<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Social &amp; Peace</h2>
+<ul class="space-y-2.5 md:space-y-3">
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="s1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s1">Call a Friend</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="s2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s2">Plan Fun</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="s3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s3">Stay Open</label>
+</li>
+<li class="flex items-center gap-3">
+<input class="checkbox-custom" id="s4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s4">No chasing people</label>
+</li>
+</ul>
+</div>
+<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Protect your peace</p>
+</div>
+</div>
+<!-- Weekly Focus -->
+<div class="bg-surface-container-lowest p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 shadow-sm">
+<label class="tagline text-[10px] md:text-[11px] font-bold block mb-4 opacity-60">Weekly Focus</label>
+<input class="w-full bg-background border-none rounded-xl p-4 font-body-lg text-[16px] md:text-[18px] font-normal italic placeholder:opacity-40 focus:ring-primary/20" placeholder="Visualizing a calm, intentional week..." type="text">
+</div>
+<!-- Weekly Habit Tracker -->
+<div class="bg-surface-container-lowest p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 shadow-sm overflow-x-auto">
+<h3 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-6 md:mb-8 uppercase tracking-wider opacity-80">Weekly Habit Tracker</h3>
+<table class="w-full min-w-[500px]">
+<thead>
+<tr>
+<th class="text-left font-label-md text-[13px] md:text-[14px] font-semibold opacity-60 py-2">Habit</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">M</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">T</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">W</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">T</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">F</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">S</th>
+<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">S</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-deep-brown/5">
+<tr>
+<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Move My Body</td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+</tr>
+<tr>
+<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Protein Goal</td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+</tr>
+<tr>
+<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Bible/Devotion</td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+</tr>
+<tr>
+<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">8+ Hours Sleep</td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
+</tr>
+<tr>
+<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Water</td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Daily Quote Card -->
+<div class="bg-surface-container-high p-6 md:p-container-padding py-12 md:py-16 rounded-3xl flex items-center justify-center text-center border border-deep-brown/5 shadow-sm">
+<div class="max-w-xl">
+<span class="material-symbols-outlined opacity-20 text-3xl md:text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-[18px] md:text-[22px] font-normal italic opacity-80 leading-relaxed text-deep-brown">"I am overwhelmed, not failing. I just need the next small step."</p>
+<div class="h-1 w-12 bg-primary/20 mx-auto mt-6 md:mt-8 rounded-full"></div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar - Optimized for Tablet Pinned to bottom -->
+<div class="sticky bottom-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md pb-4 pt-2">
+<nav class="standard-container">
+<div class="max-w-[540px] mx-auto flex justify-around items-center px-2 md:px-6 py-2.5 md:py-4 bg-white/90 border border-deep-brown/5 rounded-full shadow-lg">
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/40 rounded-full px-4 sm:px-5 py-2 transition-all duration-200" href="index.html">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="weekly.html">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">calendar_month</span>
+<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Weekly</span>
+</a>
+<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="wellness.html">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">energy_savings_leaf</span>
+<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Wellness</span>
+</a>
+<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="work.html">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">work</span>
+<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Work</span>
+</a>
+<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="progress.html">
+<span class="material-symbols-outlined text-[20px] md:text-[24px]">bar_chart</span>
+<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Progress</span>
+</a>
+</div>
+</nav>
+</div>
+
+
+</body></html>

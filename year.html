@@ -1,0 +1,431 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#f2b6c6",
+            "on-secondary-container": "#50694f",
+            "secondary": "#4c654b",
+            "on-error": "#ffffff",
+            "inverse-primary": "#f2b6c6",
+            "surface-container-high": "#eee7e3",
+            "primary": "#80515f",
+            "secondary-fixed-dim": "#b2ceae",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e8e1dd",
+            "on-primary-fixed": "#320f1c",
+            "on-secondary-fixed-variant": "#354d34",
+            "secondary-container": "#cbe7c7",
+            "on-primary-container": "#744654",
+            "surface-dim": "#dfd9d5",
+            "on-secondary-fixed": "#09200c",
+            "on-tertiary-fixed": "#211631",
+            "inverse-surface": "#33302d",
+            "outline-variant": "#d4c2c5",
+            "on-surface": "#1d1b19",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#ecdcff",
+            "outline": "#827376",
+            "background": "#fff8f4",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f4",
+            "on-tertiary-container": "#5a4e6c",
+            "inverse-on-surface": "#f6efeb",
+            "surface-container-low": "#f9f2ee",
+            "on-tertiary-fixed-variant": "#4d415f",
+            "tertiary-container": "#d2c2e6",
+            "surface-container": "#f3ede9",
+            "surface-tint": "#80515f",
+            "primary-fixed": "#ffd9e2",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "tertiary": "#655978",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#d0c0e4",
+            "surface": "#fff8f4",
+            "on-surface-variant": "#504446",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#ceeac9",
+            "on-primary-fixed-variant": "#653a47",
+            "on-background": "#1d1b19",
+            "surface-variant": "#e8e1dd",
+            "primary-container": "#f4b8c8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "unit": "4px",
+            "margin-mobile": "20px",
+            "margin-desktop": "40px",
+            "container-padding": "24px",
+            "gutter": "16px"
+          },
+          "fontFamily": {
+            "headline-md": ["Epilogue"],
+            "display-lg": ["Epilogue"],
+            "label-sm": ["Nunito Sans"],
+            "label-md": ["Nunito Sans"],
+            "display-lg-mobile": ["Epilogue"],
+            "body-lg": ["Nunito Sans"],
+            "body-md": ["Nunito Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+            "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+            "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .pixel-grid {
+      display: grid;
+      grid-template-columns: repeat(32, 1fr);
+      gap: 4px;
+    }
+    .month-row {
+      display: contents;
+    }
+    .pixel-cell {
+      aspect-ratio: 1 / 1;
+      border: 1px solid rgba(61, 40, 40, 0.08);
+      background-color: #ffffff;
+      border-radius: 4px;
+    }
+    .pixel-cell-empty {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col p-6 bg-surface border-r border-on-surface/8 w-64 hidden md:flex">
+<div class="mb-10">
+<h1 class="font-display-lg text-display-lg text-primary">My Reset HQ</h1>
+<p class="font-label-md text-label-md text-on-surface-variant/60">Digital Sanctuary</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span>
+<span class="font-label-md text-label-md">Weekly</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="self_care">self_care</span>
+<span class="font-label-md text-label-md">Wellness</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-label-md text-label-md">Work</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-xl px-4 py-3 active:scale-[0.98] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_graph">auto_graph</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-2 border-t border-on-surface/8 pt-6">
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 px-4 py-3 hover:bg-surface-container-high rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-grow md:ml-64 p-margin-desktop bg-surface">
+<!-- TopAppBar Anchor -->
+<header class="flex justify-between items-center w-full mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-medium">Year in Pixels</h2>
+<p class="font-body-md text-body-md text-on-surface-variant/60">A quiet space for your annual consistency map</p>
+</div>
+<div class="flex gap-4 items-center">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors" data-icon="account_circle">account_circle</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors" data-icon="settings">settings</button>
+</div>
+</header>
+<!-- Year Grid Container -->
+<div class="bg-surface-container-lowest border border-on-surface/8 rounded-xl p-container-padding max-w-[900px] mx-auto overflow-x-auto">
+<!-- Legend Section -->
+<div class="flex flex-wrap gap-6 mb-10 pb-6 border-b border-on-surface/8">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-[4px] bg-primary-container"></div>
+<span class="font-label-md text-label-md text-on-surface">Full Success</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-[4px] bg-secondary-container"></div>
+<span class="font-label-md text-label-md text-on-surface">Mostly Habitual</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-[4px] bg-tertiary-container"></div>
+<span class="font-label-md text-label-md text-on-surface">Partial Day</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-[4px] bg-surface-container-high"></div>
+<span class="font-label-md text-label-md text-on-surface-variant/60">Rest Day</span>
+</div>
+<div class="flex items-center gap-3 ml-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant/40 italic">2024 Grid</span>
+</div>
+</div>
+<!-- The Grid -->
+<div class="pixel-grid">
+<!-- Date Header Row -->
+<div class="pixel-cell-empty"></div> <!-- Top left corner empty -->
+<!-- Generate 1-31 labels -->
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">1</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">2</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">3</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">4</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">5</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">6</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">7</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">8</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">9</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">10</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">11</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">12</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">13</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">14</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">15</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">16</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">17</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">18</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">19</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">20</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">21</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">22</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">23</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">24</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">25</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">26</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">27</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">28</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">29</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">30</div>
+<div class="flex justify-center items-center font-label-sm text-label-sm text-on-surface-variant/40">31</div>
+<!-- Months Rendering -->
+<!-- Jan -->
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Jan</div>
+<!-- 31 Pixels -->
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<!-- Repeat for other months (simplified for visual demo) -->
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Feb</div>
+<!-- 29 Pixels -->
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell-empty"></div>
+<div class="pixel-cell-empty"></div>
+<!-- Mar -->
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Mar</div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<!-- Apr - Dec Rows would follow same structure -->
+<!-- Added a "Rest" visualization for variety -->
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Apr</div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="pixel-cell-empty"></div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">May</div>
+<!-- 31 Pixels -->
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Jun</div>
+<!-- 30 Pixels -->
+<div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell hover:bg-primary-container/20 cursor-pointer transition-colors"></div><div class="pixel-cell-empty"></div>
+<!-- Jul to Dec placeholder visual -->
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Jul</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Aug</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Sep</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Oct</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Nov</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+<div class="flex items-center font-label-md text-label-md text-on-surface h-8 pr-4">Dec</div><div class="col-span-31 flex items-center justify-center border border-dashed border-on-surface/8 rounded-lg font-label-sm text-on-surface-variant/20 italic">Continuing for full year...</div>
+</div>
+</div>
+<!-- Motivational Bento Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-[900px] mx-auto">
+<div class="bg-surface-container-low p-6 rounded-xl border border-on-surface/8 flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="auto_graph">auto_graph</span>
+<h3 class="font-label-md text-label-md text-on-surface">Consistency Score</h3>
+<p class="font-display-lg text-primary">0%</p>
+<p class="font-body-md text-body-md text-on-surface-variant/60">A fresh start awaits your first pixel.</p>
+</div>
+<div class="md:col-span-2 bg-white p-6 rounded-xl border border-on-surface/8 flex items-center gap-6">
+<div class="flex-shrink-0 w-24 h-24 bg-primary-container/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="spa">spa</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-primary-container">Gentle Reminder</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The goal is not perfection, but to see the patterns of your life emerge through color. Tap any pixel to begin your daily entry.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-md flex justify-around items-center py-3 border-t border-on-surface/8 z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant/30">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="auto_graph" style="font-variation-settings: 'FILL' 1;">auto_graph</span>
+<span class="text-[10px] font-label-sm">Progress</span>
+</button>
+<div class="bg-primary p-3 rounded-full -mt-10 shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="edit">edit</span>
+</div>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant/30">
+<span class="material-symbols-outlined" data-icon="self_care">self_care</span>
+<span class="text-[10px] font-label-sm">Care</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant/30">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-label-sm">Settings</span>
+</button>
+</nav>
+<!-- FAB Anchor (Contextual for Progress/Home) -->
+<button class="fixed bottom-margin-desktop right-margin-desktop bg-primary text-on-primary p-6 rounded-full shadow-xl active:scale-95 transition-transform flex items-center gap-2 z-30 hidden md:flex">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+<span class="font-label-md text-label-md">Daily Log</span>
+</button>
+</body></html>

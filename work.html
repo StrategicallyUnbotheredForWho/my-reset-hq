@@ -1,112 +1,115 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600&amp;family=Nunito+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600&amp;family=Nunito+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "surface-bright": "#fff8f4",
-                "on-tertiary-fixed-variant": "#4d415f",
-                "on-primary-container": "#744654",
-                "primary-fixed": "#ffd9e2",
-                "on-primary": "#ffffff",
-                "secondary-container": "#cbe7c7",
-                "inverse-on-surface": "#f6efeb",
-                "surface-container-lowest": "#ffffff",
-                "surface-variant": "#e8e1dd",
-                "primary-container": "#f4b8c8",
-                "on-secondary-container": "#50694f",
-                "on-tertiary-container": "#5a4e6c",
-                "on-tertiary": "#ffffff",
-                "on-error": "#ffffff",
-                "tertiary": "#655978",
-                "inverse-surface": "#33302d",
-                "on-secondary": "#ffffff",
-                "surface": "#fff8f4",
-                "outline-variant": "#d4c2c5",
-                "tertiary-fixed-dim": "#d0c0e4",
-                "primary": "#80515f",
-                "inverse-primary": "#f2b6c6",
-                "on-background": "#1d1b19",
-                "error": "#ba1a1a",
-                "tertiary-fixed": "#ecdcff",
-                "secondary-fixed-dim": "#b2ceae",
-                "on-error-container": "#93000a",
-                "surface-container-low": "#f9f2ee",
-                "on-surface": "#1d1b19",
-                "on-secondary-fixed": "#09200c",
-                "secondary": "#4c654b",
-                "on-secondary-fixed-variant": "#354d34",
-                "surface-container-highest": "#e8e1dd",
-                "on-tertiary-fixed": "#211631",
-                "on-primary-fixed-variant": "#653a47",
-                "error-container": "#ffdad6",
-                "surface-container-high": "#eee7e3",
-                "surface-container": "#f3ede9",
-                "outline": "#827376",
-                "tertiary-container": "#d2c2e6",
-                "on-primary-fixed": "#320f1c",
-                "primary-fixed-dim": "#f2b6c6",
-                "surface-tint": "#80515f",
-                "background": "#fff8f4",
-                "on-surface-variant": "#504446",
-                "surface-dim": "#dfd9d5",
-                "secondary-fixed": "#ceeac9"
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                    "surface-bright": "#fff8f4",
+                    "on-tertiary-fixed-variant": "#4d415f",
+                    "on-primary-container": "#744654",
+                    "primary-fixed": "#ffd9e2",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#cbe7c7",
+                    "inverse-on-surface": "#f6efeb",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e8e1dd",
+                    "primary-container": "#f4b8c8",
+                    "on-secondary-container": "#50694f",
+                    "on-tertiary-container": "#5a4e6c",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#655978",
+                    "inverse-surface": "#33302d",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fff8f4",
+                    "outline-variant": "#d4c2c5",
+                    "tertiary-fixed-dim": "#d0c0e4",
+                    "primary": "#80515f",
+                    "inverse-primary": "#f2b6c6",
+                    "on-background": "#1d1b19",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ecdcff",
+                    "secondary-fixed-dim": "#b2ceae",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f9f2ee",
+                    "on-surface": "#1d1b19",
+                    "on-secondary-fixed": "#09200c",
+                    "secondary": "#4c654b",
+                    "on-secondary-fixed-variant": "#354d34",
+                    "surface-container-highest": "#e8e1dd",
+                    "on-tertiary-fixed": "#211631",
+                    "on-primary-fixed-variant": "#653a47",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eee7e3",
+                    "surface-container": "#f3ede9",
+                    "outline": "#827376",
+                    "tertiary-container": "#d2c2e6",
+                    "on-primary-fixed": "#320f1c",
+                    "primary-fixed-dim": "#f2b6c6",
+                    "surface-tint": "#80515f",
+                    "background": "#fff8f4",
+                    "on-surface-variant": "#504446",
+                    "surface-dim": "#dfd9d5",
+                    "secondary-fixed": "#ceeac9"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "margin-desktop": "40px",
+                    "unit": "4px",
+                    "gutter": "16px",
+                    "container-padding": "24px",
+                    "margin-mobile": "20px"
+                },
+                "fontFamily": {
+                    "label-sm": ["Nunito Sans"],
+                    "headline-md": ["Epilogue"],
+                    "body-md": ["Nunito Sans"],
+                    "label-md": ["Nunito Sans"],
+                    "display-lg-mobile": ["Epilogue"],
+                    "body-lg": ["Nunito Sans"],
+                    "display-lg": ["Epilogue"]
+                },
+                "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                }
+              },
             },
-            "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            "spacing": {
-                "margin-desktop": "40px",
-                "unit": "4px",
-                "gutter": "16px",
-                "container-padding": "24px",
-                "margin-mobile": "20px"
-            },
-            "fontFamily": {
-                "label-sm": ["Nunito Sans"],
-                "headline-md": ["Epilogue"],
-                "body-md": ["Nunito Sans"],
-                "label-md": ["Nunito Sans"],
-                "display-lg-mobile": ["Epilogue"],
-                "body-lg": ["Nunito Sans"],
-                "display-lg": ["Epilogue"]
-            },
-            "fontSize": {
-                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
-                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
-                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
-                "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+          }
+        </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .paper-border {
-            border: 1px solid rgba(61, 40, 40, 0.08);
-        }
-    </style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .paper-border {
+                border: 1px solid rgba(61, 40, 40, 0.08);
+            }
+        </style>
 </head>
 <body class="bg-surface-bright min-h-screen text-on-surface font-body-md text-body-md overflow-x-hidden">
 <!-- TopAppBar Section -->
 <header class="bg-background dark:bg-background w-full top-0 z-40">
-<div class="flex items-center justify-center w-full px-margin-desktop py-6 max-w-[900px] mx-auto">
+<div class="flex flex-col items-center justify-center w-full px-margin-desktop py-6 max-w-[900px] mx-auto text-center">
 <h1 class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim italic">My Reset HQ</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1" id="current-date"></p>
 </div>
 </header>
 <!-- Main Canvas -->
@@ -129,20 +132,20 @@
 <div>
 <div class="flex justify-between items-end mb-3">
 <span class="font-body-md text-body-md">Daily Focus Target</span>
-<span class="font-label-md text-label-md text-secondary">4.5 / 6 hrs</span>
+<span class="font-label-md text-label-md text-secondary">0 / 6 hrs</span>
 </div>
 <div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full bg-secondary-container rounded-full" style="width: 75%;"></div>
+<div class="h-full bg-secondary-container rounded-full" style="width: 0%;"></div>
 </div>
 </div>
 <!-- Focus Stats Grid -->
 <div class="grid grid-cols-2 gap-4">
 <div class="bg-surface-container-low p-4 rounded-xl text-center">
-<span class="font-display-lg-mobile text-display-lg-mobile text-primary block">92%</span>
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary block">0%</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">Concentration</span>
 </div>
 <div class="bg-surface-container-low p-4 rounded-xl text-center">
-<span class="font-display-lg-mobile text-display-lg-mobile text-secondary block">4</span>
+<span class="font-display-lg-mobile text-display-lg-mobile text-secondary block">0</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">Deep Sessions</span>
 </div>
 </div>
@@ -159,7 +162,7 @@
 </div>
 </div>
 <div class="paper-border rounded-[16px] overflow-hidden">
-<img alt="Minimalist workspace with warm lighting" class="w-full h-48 object-cover" data-alt="A minimalist and aesthetically pleasing desk setup featuring a warm wooden desk, a single ceramic mug of tea, and a soft-glowing desk lamp. The lighting is high-key and diffused, casting soft shadows in a bright, light-mode environment. The background is a clean, neutral wall, evoking a sense of calm, focused productivity and a cozy digital sanctuary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF77FCAlBs_ldgBFXh8_4PBaMlky8MDFimCjKkvljTa4uFYH4lyaRmlskLHpsHcHun37Dc5NnDmZQnLoqyQfSgz0OZNDs23zz5GsrQN8EKP6E25V-dk_Hct9mWxoti31LM47cp5IwfIs7NtteDak7w5R5PCUfmFENQ0cJyNPnhyy-7VHXDuKvX8XWFy6cKIDsGLZUXEkZQUFWpTJFuEmPAoOJgBMGkTNZdb23aQ2rIyigPYiaH2w_Qpyq9uEu5ZkbxbsGqo3C4G6ao">
+<img alt="Minimalist workspace with warm lighting" class="w-full h-48 object-cover" data-alt="A minimalist and aesthetically pleasing desk setup featuring a warm wooden desk, a single ceramic mug of tea, and a soft-glowing desk lamp. The lighting is high-key and diffused, casting soft shadows in a bright, light-mode environment. The background is a clean, neutral wall, evoking a sense of calm, focused productivity and a cozy digital sanctuary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF77FCAlBs_ldgBFXh8_4PBaMlky8MDFimCjKkvljTa4uFYH4lyaRmlskLHpsHcHun37Dc5NnDmZQnLoqyQfSgz0OZNDs23zz5GsrQN8EKP6E25V-dk_Hct9mWxoti31LM47cp5IwfIs7NtteDak7w5R5PCUfmFENQ0cJyNPnhyy-7VHXDuKvX8XWFy6cKIDsGLZUXEkZQUFWpTJFuEmPAoOJgBMGkTNZdb23aQ2rIyigPYiaH2w_Qpyq9uEu5ZkbxbsGqo3C4G6ao"/>
 </div>
 </div>
 <!-- Right Column: Tasks, Goals, Deadlines -->
@@ -173,21 +176,19 @@
 </button>
 </div>
 <div class="space-y-4">
-<!-- Task Item Checked -->
+<!-- Task Item Unchecked -->
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] bg-primary-container flex items-center justify-center cursor-pointer">
-<span class="material-symbols-outlined text-on-primary-container">check</span>
-</div>
-<span class="font-body-lg text-body-lg text-on-surface/40 line-through">Finalize Research Thesis Structure</span>
+<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
+<span class="font-body-lg text-body-lg text-on-surface">Finalize Research Thesis Structure</span>
 </div>
 <!-- Task Item Unchecked -->
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer"></div>
+<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
 <span class="font-body-lg text-body-lg text-on-surface">Review Quarter 3 Performance Metrics</span>
 </div>
 <!-- Task Item Unchecked -->
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer"></div>
+<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
 <span class="font-body-lg text-body-lg text-on-surface">Design New User Onboarding Wireframes</span>
 </div>
 </div>
@@ -199,12 +200,12 @@
 <div class="flex-1 min-w-[140px] bg-secondary-container/20 p-4 rounded-xl border border-secondary/10">
 <span class="material-symbols-outlined text-secondary mb-2" style="font-variation-settings: 'FILL' 1;">book</span>
 <h4 class="font-label-md text-label-md text-secondary">Theory focus</h4>
-<p class="font-body-md text-body-md mt-1">2 Chapters today</p>
+<p class="font-body-md text-body-md mt-1">Ready to start</p>
 </div>
 <div class="flex-1 min-w-[140px] bg-tertiary-container/20 p-4 rounded-xl border border-tertiary/10">
 <span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 1;">language</span>
 <h4 class="font-label-md text-label-md text-tertiary">Language Lab</h4>
-<p class="font-body-md text-body-md mt-1">30m Practice</p>
+<p class="font-body-md text-body-md mt-1">Practice today</p>
 </div>
 </div>
 </div>
@@ -218,14 +219,14 @@
 <span class="w-1.5 h-1.5 rounded-full bg-error mt-2"></span>
 <div>
 <p class="font-label-md text-label-md leading-none">Draft Due</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Tomorrow, 10 AM</p>
+<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Pending date</p>
 </div>
 </li>
 <li class="flex items-start gap-2">
 <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
 <div>
 <p class="font-label-md text-label-md leading-none">Client Sync</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Friday, 2 PM</p>
+<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Pending date</p>
 </div>
 </li>
 </ul>
@@ -238,14 +239,14 @@
 <span class="material-symbols-outlined text-[16px] text-tertiary mt-1">schedule</span>
 <div>
 <p class="font-label-md text-label-md leading-none">Creative Brief</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Pending approval</p>
+<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Awaiting status</p>
 </div>
 </li>
 <li class="flex items-start gap-2">
 <span class="material-symbols-outlined text-[16px] text-tertiary mt-1">schedule</span>
 <div>
 <p class="font-label-md text-label-md leading-none">Survey Results</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Est. by Thursday</p>
+<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Awaiting status</p>
 </div>
 </li>
 </ul>
@@ -278,6 +279,12 @@
 <span class="font-label-sm text-label-sm">Progress</span>
 </a>
 </nav>
-
-
+<script>
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
+        }
+        updateDate();
+    </script>
 </body></html>

@@ -1,10 +1,11 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<html class="light" lang="en"><head></head><body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-x-hidden">```html
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>My Reset HQ - Weekly Tracking</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Epilogue:ital,wght@0,700;1,700&amp;family=Dancing+Script:wght@700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Epilogue:ital,wght@0,700;1,700&amp;family=Dancing+Script:wght@700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -118,15 +119,13 @@
             .habit-cell { width: 44px; height: 44px; }
         }
     </style>
-</head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-x-hidden">
 <!-- TopAppBar -->
 <header class="w-full bg-surface sticky top-0 z-50 border-b border-surface-variant flex-none">
 <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-md md:py-lg flex items-center justify-between">
 <h1 class="font-display-title text-display-title-mobile md:text-display-title text-primary">My Reset HQ</h1>
 <div class="flex items-center gap-md">
 <button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" data-icon="notifications">notifications</button>
-<a href="settings.html" class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" data-icon="settings">settings</a>
+<a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" data-icon="settings" href="settings.html">settings</a>
 </div>
 </div>
 </header>
@@ -140,12 +139,12 @@
 <div class="md:col-span-4 bg-surface-container rounded-xl p-md flex items-center justify-between border border-surface-variant shadow-sm mt-4 md:mt-0">
 <div>
 <span class="font-label-md text-label-md text-on-surface/60 block mb-xs">WEEKLY COMPLETION</span>
-<span class="font-h2 text-h2 text-primary">84%</span>
+<span class="font-h2 text-h2 text-primary">0%</span>
 </div>
 <div class="relative w-20 h-20">
 <svg class="w-full h-full transform -rotate-90">
 <circle class="text-surface-container-highest" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="8"></circle>
-<circle class="text-secondary-fixed-dim" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="34.1" stroke-width="8"></circle>
+<circle class="text-secondary-fixed-dim" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="213.6" stroke-width="8"></circle>
 </svg>
 </div>
 </div>
@@ -169,16 +168,16 @@
 </div>
 </div>
 <div class="space-y-4">
-<!-- Habit Rows with larger touch targets -->
+<!-- Habit Rows with empty cells -->
 <div class="flex items-center justify-between py-2 border-b border-surface-variant/30 last:border-0">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-primary" data-icon="water_drop">water_drop</span>
 <span class="font-label-md text-label-md text-on-surface">Hydration (3L)</span>
 </div>
 <div class="flex gap-2">
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
@@ -191,10 +190,10 @@
 <span class="font-label-md text-label-md text-on-surface">Protein Target</span>
 </div>
 <div class="flex gap-2">
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
@@ -206,10 +205,10 @@
 <span class="font-label-md text-label-md text-on-surface">Bible Study</span>
 </div>
 <div class="flex gap-2">
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
@@ -221,24 +220,22 @@
 <span class="font-label-md text-label-md text-on-surface">Full Workout</span>
 </div>
 <div class="flex gap-2">
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
-<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-secondary-fixed-dim text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px] md:text-[20px] cursor-pointer" data-icon="check">check</div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 <div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 md:w-11 md:h-11 rounded-lg bg-surface-container-highest border border-surface-variant cursor-pointer"></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<!-- Weekly Notes Section -->
+<!-- Weekly Notes Section (Cleared) -->
 <div class="bg-surface-container rounded-xl p-md md:p-lg border border-surface-variant shadow-sm min-h-[400px] flex flex-col">
 <h3 class="font-h2 text-h2 text-primary mb-md">Weekly Notes / Journaling</h3>
-<div class="paper-lines font-body-md text-on-surface/80 flex-grow overflow-y-auto px-xs focus:outline-none md:text-lg">
-                        The start of the week felt strong. My hydration is consistent, but I need to focus more on getting the "Top 3 Tasks" done early in the day. Feeling more energized after the morning Bible study sessions. Looking forward to hitting the heavy weights on Thursday. Need to meal prep better for next week to save time during work blocks.
-                    </div>
+<div class="paper-lines font-body-md text-on-surface/80 flex-grow overflow-y-auto px-xs focus:outline-none md:text-lg min-h-[300px]" contenteditable="true"></div>
 </div>
 </div>
 <!-- Right Column: Sidebar -->
@@ -247,18 +244,14 @@
 <h3 class="font-h2 text-h2 text-primary mb-md">Weekly Intentions</h3>
 <ul class="space-y-md">
 <li class="flex items-start gap-md group cursor-pointer p-2 rounded-lg hover:bg-surface-variant/20 transition-colors">
-<div class="w-7 h-7 mt-1 rounded border-2 border-primary-fixed-dim bg-primary-fixed-dim flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-fixed-variant text-[20px]" data-icon="check">check</span>
-</div>
+<div class="w-7 h-7 mt-1 rounded border-2 border-outline-variant flex items-center justify-center flex-shrink-0"></div>
 <div>
 <span class="font-label-md text-label-md text-on-surface block">Set 3 Intentions</span>
 <p class="text-on-surface/60 text-sm md:text-base">Define what success looks like for this week.</p>
 </div>
 </li>
 <li class="flex items-start gap-md group cursor-pointer p-2 rounded-lg hover:bg-surface-variant/20 transition-colors">
-<div class="w-7 h-7 mt-1 rounded border-2 border-primary-fixed-dim bg-primary-fixed-dim flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-fixed-variant text-[20px]" data-icon="check">check</span>
-</div>
+<div class="w-7 h-7 mt-1 rounded border-2 border-outline-variant flex items-center justify-center flex-shrink-0"></div>
 <div>
 <span class="font-label-md text-label-md text-on-surface block">Plan Meals</span>
 <p class="text-on-surface/60 text-sm md:text-base">Grocery shop and prep basic staples.</p>
@@ -272,9 +265,7 @@
 </div>
 </li>
 <li class="flex items-start gap-md group cursor-pointer p-2 rounded-lg hover:bg-surface-variant/20 transition-colors">
-<div class="w-7 h-7 mt-1 rounded border-2 border-primary-fixed-dim bg-primary-fixed-dim flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-on-primary-fixed-variant text-[20px]" data-icon="check">check</span>
-</div>
+<div class="w-7 h-7 mt-1 rounded border-2 border-outline-variant flex items-center justify-center flex-shrink-0"></div>
 <div>
 <span class="font-label-md text-label-md text-on-surface block">Schedule Workouts</span>
 <p class="text-on-surface/60 text-sm md:text-base">Block out time for movement in your calendar.</p>
@@ -284,13 +275,13 @@
 </div>
 <div class="bg-primary-container rounded-xl p-md md:p-lg text-on-primary-container shadow-sm">
 <h4 class="font-h2 text-h2 mb-xs">Next Reset</h4>
-<p class="font-body-md mb-md md:text-lg">Sunday at 6:00 PM</p>
+<p class="font-body-md mb-md md:text-lg" id="dynamic-date">Sunday at 6:00 PM</p>
 <button class="w-full bg-on-primary-container text-white font-bold py-md rounded-lg hover:opacity-90 transition-opacity md:py-lg text-lg touch-target">
                         SET REMINDER
                     </button>
 </div>
 <div class="relative rounded-xl overflow-hidden aspect-video lg:aspect-square border border-surface-variant shadow-sm">
-<img alt="Motivation" class="w-full h-full object-cover sepia-[0.3] opacity-80" data-alt="A moody, high-contrast monochrome photograph of a clean, minimalist home gym at dawn. Soft morning light filters through a large window, casting long shadows across a neatly arranged yoga mat and a set of dumbbells. The aesthetic is focused and serene, reflecting a premium boutique fitness environment with a focus on disciplined routine and quiet momentum." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5WSfIc8R-qtMcGBtiz4BkHYUBSa0eGrp4uQfujfnKDfqhrlQVuge9WQvQiMF9PVmX89jVVB9QtQ2aT2awVPCKKpAwnX_LB3pWk2Ceo0Duh-XoYLlV5z3RdKftSWhIUHf1BhuEZCqVKb8ey7qymbxn6cl6pfsL2NANWeZ5qTGHuF__H7pdba48wlXnf_9Ftq0lXMWBsTgwDJdxYJmjpcrAHSIrjYqMUvsa-eIw3yo8ifOS9dfqLBY4ppDQ-S10SS_66vu39WhPzWk3">
+<img alt="Motivation" class="w-full h-full object-cover sepia-[0.3] opacity-80" data-alt="A moody, high-contrast monochrome photograph of a clean, minimalist home gym at dawn. Soft morning light filters through a large window, casting long shadows across a neatly arranged yoga mat and a set of dumbbells. The aesthetic is focused and serene, reflecting a premium boutique fitness environment with a focus on disciplined routine and quiet momentum." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5WSfIc8R-qtMcGBtiz4BkHYUBSa0eGrp4uQfujfnKDfqhrlQVuge9WQvQiMF9PVmX89jVVB9QtQ2aT2awVPCKKpAwnX_LB3pWk2Ceo0Duh-XoYLlV5z3RdKftSWhIUHf1BhuEZCqVKb8ey7qymbxn6cl6pfsL2NANWeZ5qTGHuF__H7pdba48wlXnf_9Ftq0lXMWBsTgwDJdxYJmjpcrAHSIrjYqMUvsa-eIw3yo8ifOS9dfqLBY4ppDQ-S10SS_66vu39WhPzWk3"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent flex flex-col justify-end p-md md:p-lg">
 <p class="font-display-title text-display-title-mobile md:text-display-title leading-tight text-primary">Push Harder.</p>
 </div>
@@ -301,28 +292,40 @@
 <!-- BottomNavBar -->
 <nav class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-surface-variant shadow-lg flex-none">
 <div class="max-w-[1200px] mx-auto flex justify-around items-center px-gutter py-base h-24 md:h-28">
-<a href="index.html" class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target">
+<a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target" href="index.html">
 <span class="material-symbols-outlined text-2xl md:text-3xl" data-icon="dashboard">dashboard</span>
 <span class="font-label-sm text-label-sm md:text-base mt-1">Dashboard</span>
 </a>
-<a href="weekly.html" class="flex flex-col items-center justify-center text-primary font-bold transition-transform duration-200 flex-1 touch-target">
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform duration-200 flex-1 touch-target" href="weekly.html">
 <span class="material-symbols-outlined fill-1 text-2xl md:text-3xl" data-icon="calendar_view_week">calendar_view_week</span>
 <span class="font-label-sm text-label-sm md:text-base mt-1">Weekly</span>
 </a>
-<a href="wellness.html" class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target">
+<a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target" href="wellness.html">
 <span class="material-symbols-outlined text-2xl md:text-3xl" data-icon="self_care">self_care</span>
 <span class="font-label-sm text-label-sm md:text-base mt-1">Wellness</span>
 </a>
-<a href="work.html" class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target">
+<a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target" href="work.html">
 <span class="material-symbols-outlined text-2xl md:text-3xl" data-icon="work">work</span>
 <span class="font-label-sm text-label-sm md:text-base mt-1">Work</span>
 </a>
-<a href="progress.html" class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target">
+<a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors flex-1 touch-target" href="progress.html">
 <span class="material-symbols-outlined text-2xl md:text-3xl" data-icon="insights">insights</span>
 <span class="font-label-sm text-label-sm md:text-base mt-1">Progress</span>
 </a>
 </div>
 </nav>
+<script>
+    // Simple dynamic date for "Next Reset" (upcoming Sunday)
+    function setNextResetDate() {
+        const now = new Date();
+        const nextSunday = new Date();
+        nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7 || 7);
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        const dateString = nextSunday.toLocaleDateString(undefined, options);
+        document.getElementById('dynamic-date').textContent = `${dateString} at 6:00 PM`;
+    }
+    setNextResetDate();
+</script>
 
 
-</body></html>
+```</body></html>

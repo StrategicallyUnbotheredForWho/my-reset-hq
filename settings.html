@@ -111,10 +111,7 @@
 <header class="bg-background dark:bg-background w-full top-0 z-50">
 <div class="flex items-center justify-between w-full px-margin-desktop py-6 max-w-[600px] mx-auto md:max-w-none md:px-12">
 <h1 class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim italic">My Reset HQ</h1>
-<div class="hidden md:flex gap-8">
-<span class="text-primary font-label-md transition-all duration-200 hover:opacity-80 cursor-pointer">Dashboard</span>
-<span class="text-on-surface-variant font-label-md transition-all duration-200 hover:opacity-80 cursor-pointer">Settings</span>
-</div>
+<div class="hidden md:flex gap-8"><a class="text-primary font-label-md transition-all duration-200 hover:opacity-80 cursor-pointer" href="index.html">Dashboard</a><a class="text-on-surface-variant font-label-md transition-all duration-200 hover:opacity-80 cursor-pointer" href="settings.html">Settings</a></div>
 </div>
 </header>
 <!-- Main Content Canvas -->
@@ -126,23 +123,7 @@
 <h2 class="font-headline-md text-headline-md text-on-surface">Edit Trackers</h2>
 <p class="text-on-surface-variant font-body-md">Customise your digital sanctuary.</p>
 </div>
-<nav class="flex flex-col gap-2">
-<!-- Daily Habits - Active -->
-<button class="flex items-center gap-4 p-4 rounded-xl bg-primary-container text-on-primary-container transition-all duration-200">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-label-md">Daily Habits</span>
-</button>
-<!-- Wellness Pillars -->
-<button class="flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant transition-all duration-200">
-<span class="material-symbols-outlined" data-icon="leaf">energy_savings_leaf</span>
-<span class="font-label-md">Wellness Pillars</span>
-</button>
-<!-- Work Goals -->
-<button class="flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant transition-all duration-200">
-<span class="material-symbols-outlined" data-icon="work">work</span>
-<span class="font-label-md">Work Goals</span>
-</button>
-</nav>
+<nav class="flex flex-col gap-2"><a class="flex items-center gap-4 p-4 rounded-xl bg-primary-container text-on-primary-container transition-all duration-200" href="daily_habits.html"><span class="material-symbols-outlined" data-icon="home">home</span><span class="font-label-md">Daily Habits</span></a><a class="flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant transition-all duration-200" href="wellness_pillars.html"><span class="material-symbols-outlined" data-icon="leaf">energy_savings_leaf</span><span class="font-label-md">Wellness Pillars</span></a><a class="flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant transition-all duration-200" href="work_goals.html"><span class="material-symbols-outlined" data-icon="work">work</span><span class="font-label-md">Work Goals</span></a></nav>
 <div class="mt-auto hidden md:block">
 <div class="p-6 rounded-2xl bg-secondary-container/20 card-border">
 <p class="font-label-sm text-on-secondary-container mb-2">Pro Tip</p>
@@ -154,7 +135,6 @@
 <section class="w-full md:w-2/3 bg-white rounded-[16px] card-border p-container-padding flex flex-col relative">
 <div class="flex justify-between items-center mb-8">
 <h3 class="font-headline-md text-headline-md text-on-surface">Daily Habits</h3>
-<span class="text-label-sm text-outline px-3 py-1 bg-surface-container-highest rounded-full">5 Active</span>
 </div>
 <!-- Habit List -->
 <div class="space-y-4 mb-8">
@@ -226,26 +206,5 @@
 </div>
 </main>
 <!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] flex justify-around items-center px-gutter py-4 bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md border-t border-on-surface/5 z-50">
-<div class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-label-sm text-label-sm">Dashboard</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70">
-<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
-<span class="font-label-sm text-label-sm">Weekly</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70">
-<span class="material-symbols-outlined" data-icon="leaf">energy_savings_leaf</span>
-<span class="font-label-sm text-label-sm">Wellness</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70">
-<span class="material-symbols-outlined" data-icon="work">work</span>
-<span class="font-label-sm text-label-sm">Work</span>
-</div>
-<div class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/30 rounded-xl px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70">
-<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
-<span class="font-label-sm text-label-sm">Progress</span>
-</div>
-</nav>
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] flex justify-around items-center px-gutter py-4 bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md border-t border-on-surface/5 z-50"><a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70" href="index.html"><span class="material-symbols-outlined" data-icon="home">home</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70" href="weekly.html"><span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span><span class="font-label-sm text-label-sm">Weekly</span></a><a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70" href="wellness.html"><span class="material-symbols-outlined" data-icon="leaf">energy_savings_leaf</span><span class="font-label-sm text-label-sm">Wellness</span></a><a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70" href="work.html"><span class="material-symbols-outlined" data-icon="work">work</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/30 rounded-xl px-4 py-1 transition-transform duration-200 scale-95 active:scale-90 hover:text-primary/70" href="progress.html"><span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span><span class="font-label-sm text-label-sm">Progress</span></a></nav>
 </body></html>

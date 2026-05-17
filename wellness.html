@@ -1,8 +1,10 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Epilogue:ital,wght@0,400;0,600;1,700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;family=Dancing+Script:wght@700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Epilogue:ital,wght@0,400;0,600;1,700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;family=Dancing+Script:wght@700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -158,11 +160,11 @@
 <div class="mb-12 flex flex-col md:flex-row tablet-hero justify-between items-end gap-6">
 <div>
 <h1 class="font-cursive text-5xl deep-brown mb-2">Wellness Center</h1>
-<p class="deep-brown-muted font-montserrat text-lg max-w-xl">Curated rituals for your high-performance lifestyle. Track your daily momentum across six core pillars of vitality.</p>
+<p class="deep-brown-muted font-montserrat text-lg max-w-xl" id="current-date-display">Curated rituals for your high-performance lifestyle. Track your daily momentum across six core pillars of vitality.</p>
 </div>
 <div class="bg-primary-fixed/40 px-6 py-2 rounded-full flex items-center gap-2 shrink-0">
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
-<span class="font-bold text-sm deep-brown">STREAK: 14 DAYS</span>
+<span class="font-bold text-sm deep-brown">STREAK: 0 DAYS</span>
 </div>
 </div>
 <!-- Wellness Cards Grid -->
@@ -175,7 +177,7 @@
 </div>
 <ul class="space-y-4 font-montserrat flex-1">
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Cleanse</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -208,11 +210,11 @@
 </div>
 <ul class="space-y-4 font-montserrat flex-1">
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Morning Walk</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Strength Training</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -241,7 +243,7 @@
 <span class="deep-brown-muted">Journal</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Meditation</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -270,7 +272,7 @@
 </div>
 <ul class="space-y-4 font-montserrat flex-1">
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Protein at Every Meal</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -282,7 +284,7 @@
 <span class="deep-brown-muted">Limit Processed Food</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Mindful Eating</span>
 </li>
 <li class="flex items-center gap-3 py-1">
@@ -307,7 +309,7 @@
 <span class="deep-brown-muted">8+ Hours Sleep</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">No Phone in Bed</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -328,7 +330,7 @@
 </div>
 <ul class="space-y-4 font-montserrat flex-1">
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Do Something Fun</span>
 </li>
 <li class="flex items-center gap-3 py-1 border-b border-black/5">
@@ -344,7 +346,7 @@
 <span class="deep-brown-muted">Celebrate Small Wins</span>
 </li>
 <li class="flex items-center gap-3 py-1">
-<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="material-symbols-outlined text-outline/30" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="deep-brown-muted">Speak Kindly to Yourself</span>
 </li>
 </ul>
@@ -353,11 +355,13 @@
 <!-- Featured Reflection Section -->
 <div class="mt-12 card-soft p-10 rounded-3xl flex flex-col md:flex-row tablet-reflection items-stretch gap-10 border-2 border-surface-variant/20">
 <div class="w-full md:w-2/5 shrink-0">
-<img alt="Meditation space" class="rounded-2xl w-full h-full min-h-[280px] object-cover shadow-sm" data-alt="A serene, minimalist home meditation corner during the golden hour. A single sage green yoga mat is spread across a dark hardwood floor. Soft, warm sunlight filters through sheer linen curtains, casting gentle shadows. In the background, a small ceramic bowl and a stack of leather-bound journals sit on a low walnut pedestal. The atmosphere is peaceful, clean, and grounded in professional wellness aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx-a_By4bpZnGBbPsvlxwTKduSoMjVcSZz-ccotl29Upati3m52oVnRX0vssj0Xrry72jROvM1EottieX0_C7qnWjo-oD4qqClgyJEYdPkUjciXkhOap2GHxbgI22oj2pjtwZWkS4eOGfjZ-Z8qTOdSvwiORAVu826bzVYQm2cFQ4KfKTYKakbgDgCdJ8c5mWbaLd0-CGG7IgJNwmcrSLIVzZY7WRxW55uWm7QLiDEcBAGNxkuTOoKOiuo3nLWUIUX0uXvM-IWpkQA">
+<img alt="Meditation space" class="rounded-2xl w-full h-full min-h-[280px] object-cover shadow-sm" data-alt="A serene, minimalist home meditation corner during the golden hour. A single sage green yoga mat is spread across a dark hardwood floor. Soft, warm sunlight filters through sheer linen curtains, casting gentle shadows. In the background, a small ceramic bowl and a stack of leather-bound journals sit on a low walnut pedestal. The atmosphere is peaceful, clean, and grounded in professional wellness aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx-a_By4bpZnGBbPsvlxwTKduSoMjVcSZz-ccotl29Upati3m52oVnRX0vssj0Xrry72jROvM1EottieX0_C7qnWjo-oD4qqClgyJEYdPkUjciXkhOap2GHxbgI22oj2pjtwZWkS4eOGfjZ-Z8qTOdSvwiORAVu826bzVYQm2cFQ4KfKTYKakbgDgCdJ8c5mWbaLd0-CGG7IgJNwmcrSLIVzZY7WRxW55uWm7QLiDEcBAGNxkuTOoKOiuo3nLWUIUX0uXvM-IWpkQA"/>
 </div>
 <div class="flex flex-col justify-center flex-1">
 <h3 class="font-montserrat font-bold text-2xl deep-brown mb-6">Today's Reflection</h3>
-<p class="deep-brown-muted font-montserrat italic text-lg mb-10">"Wellness is not a destination, but a series of small, intentional choices that build the foundation for your most powerful self."</p>
+<div class="mb-10">
+<textarea class="w-full p-4 rounded-xl border border-outline-variant bg-white/50 font-montserrat deep-brown-muted italic text-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all min-h-[120px]" placeholder="Wellness is not a destination, but a series of small, intentional choices... Write your thoughts here."></textarea>
+</div>
 <div>
 <button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-bold font-montserrat hover:shadow-lg transition-all active:scale-95">
                     LOG YOUR JOURNAL ENTRY
@@ -369,12 +373,21 @@
 </main>
 <!-- BottomNavBar Navigation Shell -->
 <footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-surface/90 backdrop-blur-md border-t border-surface-variant/30 rounded-t-3xl md:hidden shadow-lg">
-<a href="index.html" class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span><span class="text-[10px] font-bold">Dashboard</span></a>
-<a href="weekly.html" class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span><span class="text-[10px] font-bold">Weekly</span></a>
-<a href="wellness.html" class="flex flex-col items-center justify-center text-primary font-bold bg-transparent scale-110 transition-transform duration-200"><span class="material-symbols-outlined" data-icon="self_care" style="font-variation-settings: 'FILL' 1;">self_care</span><span class="text-[10px]">Wellness</span></a>
-<a href="work.html" class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined" data-icon="work">work</span><span class="text-[10px] font-bold">Work</span></a>
-<a href="progress.html" class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined" data-icon="insights">insights</span><span class="text-[10px] font-bold">Progress</span></a>
+<a class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity" href="index.html"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span><span class="text-[10px] font-bold">Dashboard</span></a>
+<a class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity" href="weekly.html"><span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span><span class="text-[10px] font-bold">Weekly</span></a>
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-transparent scale-110 transition-transform duration-200" href="wellness.html"><span class="material-symbols-outlined" data-icon="self_care" style="font-variation-settings: 'FILL' 1;">self_care</span><span class="text-[10px]">Wellness</span></a>
+<a class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity" href="work.html"><span class="material-symbols-outlined" data-icon="work">work</span><span class="text-[10px] font-bold">Work</span></a>
+<a class="flex flex-col items-center justify-center deep-brown-muted opacity-60 hover:opacity-100 transition-opacity" href="progress.html"><span class="material-symbols-outlined" data-icon="insights">insights</span><span class="text-[10px] font-bold">Progress</span></a>
 </footer>
-
-
+<script>
+    function updateDynamicDate() {
+        const dateElement = document.getElementById('current-date-display');
+        if (dateElement) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString('en-US', options);
+            dateElement.innerText = `Curated rituals for your high-performance lifestyle. Today is ${today}. Track your daily momentum across six core pillars of vitality.`;
+        }
+    }
+    updateDynamicDate();
+</script>
 </body></html>

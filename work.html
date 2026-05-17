@@ -1,290 +1,273 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Reset HQ - Work &amp; Study Goals</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600&amp;family=Nunito+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-          tailwind.config = {
-            darkMode: "class",
-            theme: {
-              extend: {
-                "colors": {
-                    "surface-bright": "#fff8f4",
-                    "on-tertiary-fixed-variant": "#4d415f",
-                    "on-primary-container": "#744654",
-                    "primary-fixed": "#ffd9e2",
-                    "on-primary": "#ffffff",
-                    "secondary-container": "#cbe7c7",
-                    "inverse-on-surface": "#f6efeb",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-variant": "#e8e1dd",
-                    "primary-container": "#f4b8c8",
-                    "on-secondary-container": "#50694f",
-                    "on-tertiary-container": "#5a4e6c",
-                    "on-tertiary": "#ffffff",
-                    "on-error": "#ffffff",
-                    "tertiary": "#655978",
-                    "inverse-surface": "#33302d",
-                    "on-secondary": "#ffffff",
-                    "surface": "#fff8f4",
-                    "outline-variant": "#d4c2c5",
-                    "tertiary-fixed-dim": "#d0c0e4",
-                    "primary": "#80515f",
-                    "inverse-primary": "#f2b6c6",
-                    "on-background": "#1d1b19",
-                    "error": "#ba1a1a",
-                    "tertiary-fixed": "#ecdcff",
-                    "secondary-fixed-dim": "#b2ceae",
-                    "on-error-container": "#93000a",
-                    "surface-container-low": "#f9f2ee",
-                    "on-surface": "#1d1b19",
-                    "on-secondary-fixed": "#09200c",
-                    "secondary": "#4c654b",
-                    "on-secondary-fixed-variant": "#354d34",
-                    "surface-container-highest": "#e8e1dd",
-                    "on-tertiary-fixed": "#211631",
-                    "on-primary-fixed-variant": "#653a47",
-                    "error-container": "#ffdad6",
-                    "surface-container-high": "#eee7e3",
-                    "surface-container": "#f3ede9",
-                    "outline": "#827376",
-                    "tertiary-container": "#d2c2e6",
-                    "on-primary-fixed": "#320f1c",
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
                     "primary-fixed-dim": "#f2b6c6",
-                    "surface-tint": "#80515f",
-                    "background": "#fff8f4",
-                    "on-surface-variant": "#504446",
+                    "on-secondary-container": "#50694f",
+                    "secondary": "#4c654b",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#f2b6c6",
+                    "surface-container-high": "#eee7e3",
+                    "primary": "#80515f",
+                    "secondary-fixed-dim": "#b2ceae",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e8e1dd",
+                    "on-primary-fixed": "#320f1c",
+                    "on-secondary-fixed-variant": "#354d34",
+                    "secondary-container": "#cbe7c7",
+                    "on-primary-container": "#744654",
                     "surface-dim": "#dfd9d5",
-                    "secondary-fixed": "#ceeac9"
-                },
-                "borderRadius": {
+                    "on-secondary-fixed": "#09200c",
+                    "on-tertiary-fixed": "#211631",
+                    "inverse-surface": "#33302d",
+                    "outline-variant": "#d4c2c5",
+                    "on-surface": "#1d1b19",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#ecdcff",
+                    "outline": "#827376",
+                    "background": "#fff8f4",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fff8f4",
+                    "on-tertiary-container": "#5a4e6c",
+                    "inverse-on-surface": "#f6efeb",
+                    "surface-container-low": "#f9f2ee",
+                    "on-tertiary-fixed-variant": "#4d415f",
+                    "tertiary-container": "#d2c2e6",
+                    "surface-container": "#f3ede9",
+                    "surface-tint": "#80515f",
+                    "primary-fixed": "#ffd9e2",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#655978",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#d0c0e4",
+                    "surface": "#fff8f4",
+                    "on-surface-variant": "#504446",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ceeac9",
+                    "on-primary-fixed-variant": "#653a47",
+                    "on-background": "#1d1b19",
+                    "surface-variant": "#e8e1dd",
+                    "primary-container": "#f4b8c8"
+            },
+            "borderRadius": {
                     "DEFAULT": "0.25rem",
                     "lg": "0.5rem",
                     "xl": "0.75rem",
                     "full": "9999px"
-                },
-                "spacing": {
-                    "margin-desktop": "40px",
+            },
+            "spacing": {
                     "unit": "4px",
-                    "gutter": "16px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "40px",
                     "container-padding": "24px",
-                    "margin-mobile": "20px"
-                },
-                "fontFamily": {
-                    "label-sm": ["Nunito Sans"],
+                    "gutter": "16px"
+            },
+            "fontFamily": {
                     "headline-md": ["Epilogue"],
-                    "body-md": ["Nunito Sans"],
+                    "display-lg": ["Epilogue"],
+                    "label-sm": ["Nunito Sans"],
                     "label-md": ["Nunito Sans"],
                     "display-lg-mobile": ["Epilogue"],
                     "body-lg": ["Nunito Sans"],
-                    "display-lg": ["Epilogue"]
-                },
-                "fontSize": {
-                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                    "body-md": ["Nunito Sans"]
+            },
+            "fontSize": {
                     "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
                     "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
                     "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
                     "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
-                }
-              },
-            },
-          }
-        </script>
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
-            .material-symbols-outlined {
-                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            }
-            .paper-border {
-                border: 1px solid rgba(61, 40, 40, 0.08);
-            }
-        </style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fff8f4;
+            color: #1d1b19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(61, 40, 40, 0.08);
+            border-radius: 16px;
+        }
+        .timer-circle {
+            background: conic-gradient(#f4b8c8 0deg, #f4b8c8 0deg, transparent 0deg);
+            border: 2px solid rgba(61, 40, 40, 0.08);
+        }
+    </style>
 </head>
-<body class="bg-surface-bright min-h-screen text-on-surface font-body-md text-body-md overflow-x-hidden">
-<!-- TopAppBar Section -->
-<header class="bg-background dark:bg-background w-full top-0 z-40">
-<div class="flex flex-col items-center justify-center w-full px-margin-desktop py-6 max-w-[900px] mx-auto text-center">
-<h1 class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim italic">My Reset HQ</h1>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1" id="current-date"></p>
+<body class="bg-background">
+<!-- Navigation Shell (Desktop/iPad Focus) -->
+<nav class="fixed left-0 top-0 h-full z-40 flex flex-col p-6 bg-surface border-r border-on-surface/8 w-64 hidden md:flex">
+<div class="mb-10">
+<h1 class="font-display-lg text-display-lg text-primary">My Reset HQ</h1>
+<p class="font-label-md text-label-md text-on-surface-variant/60">Digital Sanctuary</p>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span>
+<span class="font-label-md text-label-md">Weekly</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="self_care">self_care</span>
+<span class="font-label-md text-label-md">Wellness</span>
+</a>
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-xl px-4 py-3" href="#">
+<span class="material-symbols-outlined" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-label-md text-label-md">Work</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_graph">auto_graph</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</div>
+<div class="mt-auto border-t border-on-surface/8 pt-6 flex flex-col gap-2">
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/30 hover:bg-surface-container-high rounded-xl px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-margin-mobile md:p-margin-desktop min-h-screen">
+<header class="max-w-[800px] mx-auto mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary">Work &amp; Study</h2>
+<p class="font-body-md text-body-md text-on-surface-variant/60">A quiet space for focused productivity.</p>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container-high rounded-full transition-colors" data-icon="account_circle">account_circle</button>
 </div>
 </header>
-<!-- Main Canvas -->
-<main class="max-w-[900px] mx-auto px-margin-desktop pb-32">
-<!-- Header / Intro -->
-<section class="mb-10 text-center">
-<h2 class="font-headline-md text-headline-md text-primary mb-2">Work &amp; Study Goals</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Your sanctuary for focused growth and steady progress.</p>
+<div class="max-w-[800px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Pomodoro Timer Section (Bento Highlight) -->
+<section class="md:col-span-12 paper-card p-8 flex flex-col items-center justify-center text-center">
+<div class="mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Focus Session</span>
+</div>
+<div class="relative w-48 h-48 flex items-center justify-center mb-8">
+<div class="absolute inset-0 rounded-full border-4 border-primary-container/20"></div>
+<div class="absolute inset-0 rounded-full border-4 border-primary-container border-t-transparent -rotate-45"></div>
+<div class="flex flex-col">
+<span class="font-display-lg text-[48px] leading-none text-primary font-bold">25:00</span>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-colors active:scale-95">Reset</button>
+<button class="bg-primary text-on-primary px-10 py-3 rounded-full font-label-md text-label-md flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start
+                    </button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-highest transition-colors active:scale-95">Pause</button>
+</div>
 </section>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-<!-- Left Column: Analytics & Quote -->
-<div class="md:col-span-5 space-y-8">
-<!-- Flow State Analytics Bento Card -->
-<div class="bg-surface-container-lowest paper-border rounded-[16px] p-container-padding flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">insights</span>
-<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Flow State Analytics</h3>
+<!-- Priority Tasks (Asymmetric Column) -->
+<section class="md:col-span-7 flex flex-col gap-6">
+<div class="paper-card p-6 min-h-[320px]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="priority_high">priority_high</span>
+                            Priority Tasks
+                        </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant/40">0 of 3 done</span>
 </div>
-<!-- Daily Focus Target -->
-<div>
-<div class="flex justify-between items-end mb-3">
-<span class="font-body-md text-body-md">Daily Focus Target</span>
-<span class="font-label-md text-label-md text-secondary">0 / 6 hrs</span>
+<!-- Clean Start Empty State -->
+<div class="flex flex-col items-center justify-center h-48 text-center px-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant/20 text-[28px]" data-icon="edit_note">edit_note</span>
 </div>
-<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full bg-secondary-container rounded-full" style="width: 0%;"></div>
+<p class="font-body-md text-body-md text-on-surface-variant/40 italic">Your top priorities for today will appear here. Tap the button below to set your focus.</p>
 </div>
-</div>
-<!-- Focus Stats Grid -->
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-low p-4 rounded-xl text-center">
-<span class="font-display-lg-mobile text-display-lg-mobile text-primary block">0%</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Concentration</span>
-</div>
-<div class="bg-surface-container-low p-4 rounded-xl text-center">
-<span class="font-display-lg-mobile text-display-lg-mobile text-secondary block">0</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Deep Sessions</span>
-</div>
-</div>
-</div>
-<!-- Momentum Quote Card -->
-<div class="bg-primary-container/20 paper-border rounded-[16px] p-container-padding relative overflow-hidden group">
-<span class="material-symbols-outlined text-primary/10 absolute -right-4 -top-4 text-[120px] select-none">format_quote</span>
-<div class="relative z-10">
-<h3 class="font-label-md text-label-md text-primary mb-4 uppercase tracking-widest">Momentum</h3>
-<p class="font-headline-md text-headline-md text-primary italic leading-relaxed">
-                            "The secret of getting ahead is getting started."
-                        </p>
-<p class="font-label-sm text-label-sm text-on-primary-fixed-variant mt-4">— Mark Twain</p>
-</div>
-</div>
-<div class="paper-border rounded-[16px] overflow-hidden">
-<img alt="Minimalist workspace with warm lighting" class="w-full h-48 object-cover" data-alt="A minimalist and aesthetically pleasing desk setup featuring a warm wooden desk, a single ceramic mug of tea, and a soft-glowing desk lamp. The lighting is high-key and diffused, casting soft shadows in a bright, light-mode environment. The background is a clean, neutral wall, evoking a sense of calm, focused productivity and a cozy digital sanctuary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF77FCAlBs_ldgBFXh8_4PBaMlky8MDFimCjKkvljTa4uFYH4lyaRmlskLHpsHcHun37Dc5NnDmZQnLoqyQfSgz0OZNDs23zz5GsrQN8EKP6E25V-dk_Hct9mWxoti31LM47cp5IwfIs7NtteDak7w5R5PCUfmFENQ0cJyNPnhyy-7VHXDuKvX8XWFy6cKIDsGLZUXEkZQUFWpTJFuEmPAoOJgBMGkTNZdb23aQ2rIyigPYiaH2w_Qpyq9uEu5ZkbxbsGqo3C4G6ao"/>
-</div>
-</div>
-<!-- Right Column: Tasks, Goals, Deadlines -->
-<div class="md:col-span-7 space-y-8">
-<!-- Priority Tasks Section -->
-<div class="bg-surface-container-lowest paper-border rounded-[16px] p-container-padding">
-<div class="flex justify-between items-center mb-6">
-<h3 class="font-headline-md text-headline-md text-on-surface">Priority Tasks</h3>
-<button class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined text-[20px]">add</span>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-dashed border-on-surface/20 rounded-xl py-3 text-on-surface-variant/40 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-label-md text-label-md">Add a priority task</span>
 </button>
 </div>
-<div class="space-y-4">
-<!-- Task Item Unchecked -->
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
-<span class="font-body-lg text-body-lg text-on-surface">Finalize Research Thesis Structure</span>
+<div class="paper-card p-6">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+                        Study Goals
+                    </h3>
+<div class="flex flex-col gap-4">
+<!-- Clean Start Placeholder -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low/50 border border-dashed border-on-surface/10">
+<div class="w-6 h-6 rounded-md border-2 border-primary-container"></div>
+<span class="font-body-md text-body-md text-on-surface-variant/30">Define your learning objective for this session...</span>
 </div>
-<!-- Task Item Unchecked -->
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
-<span class="font-body-lg text-body-lg text-on-surface">Review Quarter 3 Performance Metrics</span>
-</div>
-<!-- Task Item Unchecked -->
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-[4px] border-2 border-on-surface/10 hover:border-primary-container transition-colors cursor-pointer flex items-center justify-center"></div>
-<span class="font-body-lg text-body-lg text-on-surface">Design New User Onboarding Wireframes</span>
-</div>
-</div>
-</div>
-<!-- Study Goals Section -->
-<div class="bg-surface-container-lowest paper-border rounded-[16px] p-container-padding">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Study Goals</h3>
-<div class="flex flex-wrap gap-4">
-<div class="flex-1 min-w-[140px] bg-secondary-container/20 p-4 rounded-xl border border-secondary/10">
-<span class="material-symbols-outlined text-secondary mb-2" style="font-variation-settings: 'FILL' 1;">book</span>
-<h4 class="font-label-md text-label-md text-secondary">Theory focus</h4>
-<p class="font-body-md text-body-md mt-1">Ready to start</p>
-</div>
-<div class="flex-1 min-w-[140px] bg-tertiary-container/20 p-4 rounded-xl border border-tertiary/10">
-<span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 1;">language</span>
-<h4 class="font-label-md text-label-md text-tertiary">Language Lab</h4>
-<p class="font-body-md text-body-md mt-1">Practice today</p>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low/50 border border-dashed border-on-surface/10 opacity-60">
+<div class="w-6 h-6 rounded-md border-2 border-primary-container"></div>
+<span class="font-body-md text-body-md text-on-surface-variant/30">Add another study goal...</span>
 </div>
 </div>
 </div>
-<!-- Deadlines & Waiting On -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<!-- Deadlines List -->
-<div class="bg-surface-container-lowest paper-border rounded-[16px] p-container-padding">
-<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-4">Deadlines</h4>
-<ul class="space-y-4">
-<li class="flex items-start gap-2">
-<span class="w-1.5 h-1.5 rounded-full bg-error mt-2"></span>
-<div>
-<p class="font-label-md text-label-md leading-none">Draft Due</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Pending date</p>
-</div>
-</li>
-<li class="flex items-start gap-2">
-<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
-<div>
-<p class="font-label-md text-label-md leading-none">Client Sync</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Pending date</p>
-</div>
-</li>
-</ul>
-</div>
-<!-- Waiting On List -->
-<div class="bg-surface-container-lowest paper-border rounded-[16px] p-container-padding">
-<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-4">Waiting On</h4>
-<ul class="space-y-4">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-[16px] text-tertiary mt-1">schedule</span>
-<div>
-<p class="font-label-md text-label-md leading-none">Creative Brief</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Awaiting status</p>
-</div>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-[16px] text-tertiary mt-1">schedule</span>
-<div>
-<p class="font-label-md text-label-md leading-none">Survey Results</p>
-<p class="font-label-sm text-label-sm text-on-surface/60 mt-1">Awaiting status</p>
-</div>
-</li>
-</ul>
+</section>
+<!-- Side Cards (Deadlines & Inspiration) -->
+<aside class="md:col-span-5 flex flex-col gap-6">
+<div class="paper-card p-6 bg-secondary-container/20">
+<h3 class="font-headline-md text-headline-md text-on-secondary-container flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined" data-icon="event_upcoming">event_upcoming</span>
+                        Deadlines
+                    </h3>
+<div class="flex flex-col items-center justify-center py-10">
+<p class="font-body-md text-body-md text-on-secondary-container/40 text-center">No upcoming deadlines detected.<br/>Enjoy the clear horizon.</p>
 </div>
 </div>
+<div class="paper-card overflow-hidden relative group">
+<img alt="Desk with open journal" class="w-full h-48 object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A top-down aesthetic shot of a clean, minimalist wooden desk. An open linen-textured journal sits next to a warm cup of herbal tea and a single sprig of dried eucalyptus. The lighting is soft and golden, suggesting a quiet morning sun. The color palette is composed of soft creams, warm beiges, and muted sage greens, creating a serene and focused sanctuary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyyVUUKbOq7bzBOudIYhrT5WFjwdq2BMdV39d1JKYEbpvbLXVcpt10oVlY_1Npr1TG0cRx-1hOt4zGUI48Oka5W2WcFqTpa2MM-RmYgv7aimujuv6lIng9bIdxe-OkAwwYnKDjTbdc3a_1OMwAGoku8ozfuU5Mr11mZOyu6TZ8HO5qEdWerZePf3n1tL4hs7gIq0tBNT0Wjs3Px1_kcmiHiF4qkVNgq7iKZxOejaC9EmKC5gPu69lyLlDQ3Vm4i_py_JXz9yLkZqtM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent p-6 flex flex-col justify-end">
+<p class="font-body-md text-body-md italic text-primary">"The secret of getting ahead is getting started."</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant/60 mt-1">— Mark Twain</p>
 </div>
+</div>
+<div class="paper-card p-6 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Quick Action</h4>
+<button class="flex items-center justify-center gap-2 bg-primary-container text-on-primary-container rounded-xl py-4 font-label-md text-label-md active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                        Quick Entry
+                    </button>
+</div>
+</aside>
 </div>
 </main>
-<!-- BottomNavBar Section -->
-<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] flex justify-around items-center px-gutter py-4 bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md z-50 border-t border-on-surface/5">
-<a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 scale-95 active:scale-90 transition-transform duration-200" href="index.html">
-<span class="material-symbols-outlined">home</span>
-<span class="font-label-sm text-label-sm">Dashboard</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 scale-95 active:scale-90 transition-transform duration-200" href="weekly.html">
-<span class="material-symbols-outlined">calendar_month</span>
-<span class="font-label-sm text-label-sm">Weekly</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 scale-95 active:scale-90 transition-transform duration-200" href="wellness.html">
-<span class="material-symbols-outlined">Leaf</span>
-<span class="font-label-sm text-label-sm">Wellness</span>
-</a>
-<!-- Active Tab: Work -->
-<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-container/30 rounded-xl px-4 py-1 scale-95 active:scale-90 transition-transform duration-200" href="work.html">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
-<span class="font-label-sm text-label-sm">Work</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface/30 dark:text-on-surface-variant/30 px-4 py-1 hover:text-primary/70 scale-95 active:scale-90 transition-transform duration-200" href="progress.html">
-<span class="material-symbols-outlined">bar_chart</span>
-<span class="font-label-sm text-label-sm">Progress</span>
-</a>
+<!-- Mobile Bottom Nav (Suppressed on iPad/Desktop via hidden md:flex) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-md flex justify-around items-center px-4 z-50">
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="dashboard">dashboard</span>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="calendar_view_week">calendar_view_week</span>
+<div class="bg-primary-container p-3 rounded-full -mt-8 shadow-md">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="self_care">self_care</span>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="auto_graph">auto_graph</span>
 </nav>
-<script>
-        function updateDate() {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const today = new Date();
-            document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
-        }
-        updateDate();
-    </script>
 </body></html>

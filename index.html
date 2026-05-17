@@ -1,10 +1,13 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Dashboard - My Reset HQ</title>
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Reset HQ - Project Hub</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -12,419 +15,336 @@
                 extend: {
                     "colors": {
                         "on-secondary-container": "#50694f",
-                        "secondary-fixed-dim": "#b2ceae",
-                        "outline-variant": "#d4c2c5",
-                        "on-background": "#3d2828",
-                        "primary-container": "#f4b8c8",
-                        "surface": "#fff8f4",
-                        "background": "#fff8f4",
-                        "surface-container-high": "#eee7e3",
-                        "on-primary-fixed-variant": "#653a47",
-                        "surface-bright": "#fff8f4",
-                        "on-primary": "#ffffff",
-                        "on-secondary-fixed-variant": "#354d34",
-                        "tertiary": "#655978",
-                        "secondary-fixed": "#ceeac9",
-                        "on-primary-fixed": "#320f1c",
-                        "on-secondary-fixed": "#09200c",
-                        "primary-fixed": "#ffd9e2",
-                        "secondary": "#4c654b",
-                        "error-container": "#ffdad6",
-                        "surface-container-low": "#f9f2ee",
-                        "on-tertiary-fixed": "#211631",
-                        "primary": "#80515f",
-                        "on-error-container": "#93000a",
-                        "on-surface": "#3d2828",
-                        "inverse-surface": "#33302d",
-                        "surface-container-highest": "#e8e1dd",
-                        "on-tertiary": "#ffffff",
-                        "error": "#ba1a1a",
-                        "on-primary-container": "#744654",
-                        "surface-container": "#f3ede9",
                         "inverse-primary": "#f2b6c6",
-                        "secondary-container": "#cbe7c7",
-                        "on-error": "#ffffff",
-                        "outline": "#827376",
-                        "on-surface-variant": "#504446",
-                        "tertiary-fixed-dim": "#d0c0e4",
-                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f4",
                         "primary-fixed-dim": "#f2b6c6",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#4d415f",
-                        "inverse-on-surface": "#f6efeb",
-                        "surface-tint": "#80515f",
+                        "on-secondary-fixed-variant": "#354d34",
+                        "secondary-container": "#cbe7c7",
                         "on-tertiary-container": "#5a4e6c",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#653a47",
+                        "inverse-surface": "#33302d",
+                        "on-surface": "#1d1b19",
+                        "secondary-fixed": "#ceeac9",
+                        "on-tertiary-fixed": "#211631",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#d0c0e4",
+                        "tertiary": "#655978",
+                        "surface-container-low": "#f9f2ee",
+                        "surface-container-high": "#eee7e3",
+                        "secondary-fixed-dim": "#b2ceae",
                         "surface-variant": "#e8e1dd",
-                        "surface-dim": "#dfd9d5",
-                        "tertiary-fixed": "#ecdcff",
+                        "on-tertiary-fixed-variant": "#4d415f",
+                        "on-secondary-fixed": "#09200c",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#744654",
                         "tertiary-container": "#d2c2e6",
-                        "custom-lavender": "#d4c4e8",
-                        "custom-sage": "#b8d4b4",
-                        "custom-blue": "#b8ccf0",
-                        "custom-peach": "#f0cca8",
-                        "custom-pistachio": "#d4e8b8",
-                        "deep-brown": "#3d2828"
+                        "surface-container": "#f3ede9",
+                        "outline": "#827376",
+                        "surface-tint": "#80515f",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dfd9d5",
+                        "surface-bright": "#fff8f4",
+                        "secondary": "#4c654b",
+                        "inverse-on-surface": "#f6efeb",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffd9e2",
+                        "primary-container": "#f4b8c8",
+                        "on-secondary": "#ffffff",
+                        "primary": "#80515f",
+                        "on-surface-variant": "#504446",
+                        "on-primary-fixed": "#320f1c",
+                        "on-background": "#1d1b19",
+                        "tertiary-fixed": "#ecdcff",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e8e1dd",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#d4c2c5",
+                        "background": "#fff8f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
                     },
                     "spacing": {
-                        "margin-mobile": "20px",
                         "gutter": "16px",
-                        "container-padding": "40px",
+                        "margin-mobile": "20px",
                         "unit": "4px",
-                        "margin-desktop": "40px"
+                        "margin-desktop": "40px",
+                        "container-padding": "24px"
                     },
                     "fontFamily": {
                         "display-lg": ["Epilogue"],
-                        "headline-md": ["Montserrat"],
-                        "body-lg": ["Montserrat"],
-                        "label-md": ["Montserrat"],
-                        "body-md": ["Montserrat"],
-                        "label-sm": ["Montserrat"],
-                        "cursive": ["Great Vibes", "cursive"]
+                        "label-md": ["Nunito Sans"],
+                        "body-lg": ["Nunito Sans"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "label-sm": ["Nunito Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-md": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
                     }
-                }
-            }
+                },
+            },
         }
     </script>
 <style>
+        body {
+            background-color: #fff8f4;
+            color: #1d1b19;
+            -webkit-font-smoothing: antialiased;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            color: #3d2828;
         }
-        .checkbox-custom:checked + label {
-            text-decoration: line-through;
-            opacity: 0.4;
-        }
-        .checkbox-custom {
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            border: 1px solid rgba(61, 40, 40, 0.15);
-            border-radius: 4px;
-            cursor: pointer;
-            position: relative;
-            background-color: white;
-        }
-        .checkbox-custom:checked {
-            background-color: #f4b8c8;
-            border-color: #f4b8c8;
-        }
-        .checkbox-custom:checked::after {
-            content: 'check';
-            font-family: 'Material Symbols Outlined';
-            font-size: 14px;
-            color: #3d2828;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .habit-circle {
-            width: 36px;
-            height: 36px;
-            border-radius: 9999px;
-            border: 1px solid rgba(61, 40, 40, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        @media (min-width: 768px) {
-            .habit-circle {
-                width: 40px;
-                height: 40px;
-            }
-        }
-        .habit-circle.active {
-            background-color: #b8d4b4;
-            border-color: #b8d4b4;
-            transform: scale(1.05);
-        }
-        .tagline {
-            font-variant: small-caps;
-            letter-spacing: 0.2em;
-        }
-        .standard-container {
-            max-width: 960px; /* Reduced for natural iPad feeling */
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        @media (min-width: 768px) {
-            .standard-container {
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-        }
-        @media (min-width: 1024px) {
-            .standard-container {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
+        .card-border {
+            border: 1px solid rgba(61, 40, 40, 0.08);
         }
     </style>
 </head>
-<body class="bg-background text-deep-brown font-body-md min-h-screen flex flex-col">
-<!-- Top App Bar -->
-<header class="w-full bg-background pt-6 pb-4 md:pt-8 md:pb-4 sticky top-0 z-30">
-<div class="standard-container">
-<div class="flex flex-col items-center w-full">
-<div class="flex justify-between items-center w-full mb-4">
-<div class="text-deep-brown/60 font-label-md text-[13px] md:text-[14px] font-semibold w-32 hidden sm:block">Monday, Oct 23</div>
-<h1 class="font-cursive text-[36px] md:text-[48px] text-primary flex-1 text-center">My Reset HQ</h1>
-<div class="w-32 flex justify-end">
-<button class="bg-primary-container text-deep-brown px-4 md:px-6 py-2 rounded-full font-label-md text-[13px] md:text-[14px] font-semibold hover:opacity-80 transition-opacity shadow-sm whitespace-nowrap">Daily Reset</button>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-on-surface/8 docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4">
+<h1 class="font-display-lg text-display-lg font-semibold text-primary">My Reset HQ</h1>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold transition-colors" href="#">Project Hub</a>
+<a class="text-on-surface-variant/30 hover:bg-surface-container-low transition-colors px-3 py-1 rounded-lg" href="https://github.com" target="_blank">Repository</a>
+</nav>
+<div class="flex gap-2">
+<button class="material-symbols-outlined p-2 text-primary hover:bg-surface-container-low rounded-full transition-transform active:scale-90" data-icon="account_circle">account_circle</button>
+<button class="material-symbols-outlined p-2 text-primary hover:bg-surface-container-low rounded-full transition-transform active:scale-90" data-icon="settings">settings</button>
 </div>
-</div>
-<p class="tagline text-[10px] md:text-[11px] font-bold opacity-60 text-center">soft reset • wellness • structure • peace</p>
 </div>
 </div>
 </header>
-<main class="flex-grow standard-container py-6 md:py-8 space-y-gutter">
-<!-- Grid: Optimized for iPad (2 columns at tablet, 3 at desktop) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- TODAY Card -->
-<div class="bg-primary-container p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<main class="max-w-[1000px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-16 text-center md:text-left">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Project Hub</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        Welcome to your digital sanctuary's central directory. This index tracks the final evolution of each module, designed to foster mindful productivity and wellness.
+                    </p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<a class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-md flex items-center gap-2 transition-transform active:scale-95" href="index.html">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+                            Launch Dashboard
+                        </a>
+<a class="border border-on-surface/10 px-6 py-3 rounded-full font-label-md hover:bg-surface-container-low transition-all" href="#screens">
+                            Browse Screens
+                        </a>
+</div>
+</div>
+<div class="hidden md:block w-72 h-72 rounded-3xl overflow-hidden card-border relative rotate-3 bg-white p-4">
+<img alt="Yoga and meditation background" class="w-full h-full object-cover rounded-2xl" data-alt="A serene and minimalist wellness setting featuring a rolled-up yoga mat, a glass of water, and a small green succulent plant on a light wooden floor. The morning sunlight filters through a sheer curtain, creating soft, warm lighting and long shadows. The color palette is dominated by soft creams, muted sage greens, and pale pinks, evoking a peaceful and restorative digital sanctuary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWo4kOETUJnB5m3iX4bXjXJ9C6B58rV6m3y858P6ol0aU1lGM5MdwjI9Rhv69VcY1dTW5Vv2BIxi2SGpJ3RL9JAEUASKxSaR_Te7GhZmX_Elwyqfs41Imn-wc5dFrBFZUX7W5mbvZ1Jn0L8-dEOH7j7G2brGnvLVtPWe9Cnfn5NZM2PmS-MNrJsn2aA6Wt7TgWtqLD8zwo_QMSajclpR4yGkz_MBNvOx88lTzIZ2dntvmWfXyHK6cT7Prw1H6hWHqQ_iks6wN4pdsG"/>
+</div>
+</div>
+</section>
+<!-- Final Screens Grid -->
+<section class="mb-20" id="screens">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome_motion">auto_awesome_motion</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Final Screens</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Dashboard -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-fixed text-on-primary-fixed rounded-xl">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">INDEX.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Dashboard</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">Your daily overview featuring habits, energy tracking, and core wellness stats at a glance.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="index.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Weekly Tracker -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container text-on-secondary-container rounded-xl">
+<span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">WEEKLY.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Weekly Tracker</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">A broader view of your habits and goals across the seven-day cycle with intuitive visualizations.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="weekly.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Wellness Center -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary-container text-on-tertiary-container rounded-xl">
+<span class="material-symbols-outlined" data-icon="self_care">self_care</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">WELLNESS.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Wellness Center</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">Deep-dive into mental health resources, mindfulness exercises, and emotional logging.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="wellness.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Work & Study -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-fixed-dim text-on-primary-fixed-variant rounded-xl">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">WORK.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Work &amp; Study</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">Pomodoro timers and focus-based task management for a calm, productive flow.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="work.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Progress Insights -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-fixed text-on-secondary-fixed rounded-xl">
+<span class="material-symbols-outlined" data-icon="auto_graph">auto_graph</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">PROGRESS.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Progress Insights</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">Detailed analytics and long-term trend analysis of your personal growth journey.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="progress.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Rituals Bundle -->
+<div class="bg-surface-container-low rounded-2xl p-6 card-border border-dashed flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-surface-container-highest text-primary rounded-xl">
+<span class="material-symbols-outlined" data-icon="bedtime">bedtime</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">RITUALS</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Daily Rituals</h4>
+<div class="space-y-3 mb-6">
+<a class="flex justify-between items-center bg-white p-3 rounded-lg hover:bg-primary-fixed-dim transition-colors group/sub" href="morning.html">
+<span class="font-label-md">Morning Ritual</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="wb_sunny">wb_sunny</span>
+</a>
+<a class="flex justify-between items-center bg-white p-3 rounded-lg hover:bg-tertiary-container transition-colors group/sub" href="evening.html">
+<span class="font-label-md">Evening Ritual</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="dark_mode">dark_mode</span>
+</a>
+</div>
+<p class="text-[12px] text-on-surface-variant/50 uppercase tracking-widest font-bold">Guided Flow Screens</p>
+</div>
+<!-- Year in Pixels -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-outline-variant/20 text-primary rounded-xl">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">PIXELS.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Year in Pixels</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">A high-level mosaic of your mood and consistency throughout the entire year.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="pixels.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Edit Trackers -->
+<div class="bg-white rounded-2xl p-6 card-border hover:bg-surface-container-low transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-error-container text-on-error-container rounded-xl">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant/40 tracking-wider">SETTINGS.HTML</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Edit Trackers</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6 flex-grow">Customize your experience by adding, removing, or tweaking your personal habit logs.</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-md group-hover:gap-3 transition-all" href="settings.html">
+                        View Screen <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Template Placeholder -->
+<div class="rounded-2xl p-6 border-2 border-dashed border-on-surface/10 flex flex-col items-center justify-center text-center opacity-60">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant/30 mb-4" data-icon="add_circle">add_circle</span>
+<h4 class="font-headline-md text-headline-md text-on-surface-variant/40">Future Screen</h4>
+<p class="font-body-md text-body-md text-on-surface-variant/40">Continuously evolving</p>
+</div>
+</div>
+</section>
+<!-- Deployment Steps Section -->
+<section class="bg-surface-container rounded-[2rem] p-8 md:p-12 mb-12">
+<div class="max-w-2xl mx-auto">
+<div class="flex items-center gap-4 mb-8">
+<div class="p-2 bg-primary-container rounded-full">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Deployment Steps</h3>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-white card-border flex items-center justify-center font-bold text-primary">1</div>
 <div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Today</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t1">Water</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t2">Protein Breakfast</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t3">Bible/Devotion</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t4">Workout/Walk</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t5" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t5">Skincare &amp; Dental</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="t6" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="t6">Top 3 Tasks</label>
-</li>
-</ul>
+<h5 class="font-label-md text-primary mb-1">Push to GitHub</h5>
+<p class="font-body-md text-on-surface-variant">Initialize your local repository and push all generated HTML files to your main branch.</p>
 </div>
-<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Progress, not perfection</p>
 </div>
-<!-- MIND & MOOD -->
-<div class="bg-custom-lavender p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-white card-border flex items-center justify-center font-bold text-primary">2</div>
 <div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Mind &amp; Mood</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="m1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m1">Mood Check</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="m2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m2">Therapy Notes</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="m3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m3">Journal Entry</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="m4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="m4">Safe Friend Check-in</label>
-</li>
-</ul>
+<h5 class="font-label-md text-primary mb-1">Enable Pages</h5>
+<p class="font-body-md text-on-surface-variant">Go to Repository Settings &gt; Pages. Select the "main" branch and "/ (root)" folder then click Save.</p>
 </div>
 </div>
-<!-- BODY & HEALTH -->
-<div class="bg-custom-sage p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-white card-border flex items-center justify-center font-bold text-primary">3</div>
 <div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Body &amp; Health</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="b1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b1">Meals &amp; Protein</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="b2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b2">Exercise</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="b3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b3">Weight Maintenance</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="b4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="b4">Haircare Routine</label>
-</li>
-</ul>
+<h5 class="font-label-md text-primary mb-1">Verify Links</h5>
+<p class="font-body-md text-on-surface-variant">Wait a few minutes for the build to finish. Your hub will be live at <code class="bg-white/50 px-1 rounded">username.github.io/repo-name/</code>.</p>
 </div>
 </div>
-<!-- WORK + GOALS -->
-<div class="bg-custom-blue p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
-<div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Work + Goals</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="w1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w1">Top 3 Work Tasks</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="w2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w2">One Study Task</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="w3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w3">Check Deadlines</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="w4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="w4">Admin Tasks</label>
-</li>
-</ul>
 </div>
-<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Focus on what moves the needle</p>
-</div>
-<!-- RESET ROUTINES -->
-<div class="bg-custom-peach p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
-<div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Reset Routines</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="r1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r1">Morning Reset</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="r2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r2">Evening Reset</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="r3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r3">Sunday Reset</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="r4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="r4">Digital Declutter</label>
-</li>
-</ul>
-</div>
-<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Routines create freedom</p>
-</div>
-<!-- SOCIAL & PEACE -->
-<div class="bg-custom-pistachio p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 flex flex-col justify-between min-h-[300px] md:min-h-[320px] shadow-sm">
-<div>
-<h2 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-5 md:mb-6 uppercase tracking-wider opacity-80">Social &amp; Peace</h2>
-<ul class="space-y-2.5 md:space-y-3">
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="s1" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s1">Call a Friend</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="s2" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s2">Plan Fun</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="s3" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s3">Stay Open</label>
-</li>
-<li class="flex items-center gap-3">
-<input class="checkbox-custom" id="s4" type="checkbox"><label class="font-label-md text-[13px] md:text-[14px] font-semibold" for="s4">No chasing people</label>
-</li>
-</ul>
-</div>
-<p class="italic text-[11px] md:text-[12px] mt-6 md:mt-8 opacity-60">Protect your peace</p>
+<div class="mt-12 p-6 bg-white rounded-2xl card-border flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="font-label-sm text-on-surface-variant">
+                        Ensure all file names in this directory match your GitHub filenames exactly (case-sensitive) to prevent 404 errors.
+                    </p>
 </div>
 </div>
-<!-- Weekly Focus -->
-<div class="bg-surface-container-lowest p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 shadow-sm">
-<label class="tagline text-[10px] md:text-[11px] font-bold block mb-4 opacity-60">Weekly Focus</label>
-<input class="w-full bg-background border-none rounded-xl p-4 font-body-lg text-[16px] md:text-[18px] font-normal italic placeholder:opacity-40 focus:ring-primary/20" placeholder="Visualizing a calm, intentional week..." type="text">
-</div>
-<!-- Weekly Habit Tracker -->
-<div class="bg-surface-container-lowest p-6 md:p-container-padding rounded-2xl border border-deep-brown/5 shadow-sm overflow-x-auto">
-<h3 class="font-headline-md text-[18px] md:text-[20px] font-bold mb-6 md:mb-8 uppercase tracking-wider opacity-80">Weekly Habit Tracker</h3>
-<table class="w-full min-w-[500px]">
-<thead>
-<tr>
-<th class="text-left font-label-md text-[13px] md:text-[14px] font-semibold opacity-60 py-2">Habit</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">M</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">T</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">W</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">T</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">F</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">S</th>
-<th class="font-label-sm text-[11px] md:text-[12px] font-medium opacity-60 py-2">S</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-deep-brown/5">
-<tr>
-<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Move My Body</td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-</tr>
-<tr>
-<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Protein Goal</td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-</tr>
-<tr>
-<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Bible/Devotion</td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-</tr>
-<tr>
-<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">8+ Hours Sleep</td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle mx-auto"></button></td>
-</tr>
-<tr>
-<td class="py-3 md:py-4 font-label-md text-[13px] md:text-[14px] font-semibold">Water</td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-<td class="py-3 md:py-4 text-center"><button class="habit-circle active mx-auto"><span class="material-symbols-outlined text-[16px] md:text-[18px]">check</span></button></td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Daily Quote Card -->
-<div class="bg-surface-container-high p-6 md:p-container-padding py-12 md:py-16 rounded-3xl flex items-center justify-center text-center border border-deep-brown/5 shadow-sm">
-<div class="max-w-xl">
-<span class="material-symbols-outlined opacity-20 text-3xl md:text-4xl mb-6">format_quote</span>
-<p class="font-body-lg text-[18px] md:text-[22px] font-normal italic opacity-80 leading-relaxed text-deep-brown">"I am overwhelmed, not failing. I just need the next small step."</p>
-<div class="h-1 w-12 bg-primary/20 mx-auto mt-6 md:mt-8 rounded-full"></div>
-</div>
-</div>
+</section>
 </main>
-<!-- Bottom Navigation Bar - Optimized for Tablet Pinned to bottom -->
-<div class="sticky bottom-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md pb-4 pt-2">
-<nav class="standard-container">
-<div class="max-w-[540px] mx-auto flex justify-around items-center px-2 md:px-6 py-2.5 md:py-4 bg-white/90 border border-deep-brown/5 rounded-full shadow-lg">
-<a class="flex flex-col items-center justify-center text-primary bg-primary-container/40 rounded-full px-4 sm:px-5 py-2 transition-all duration-200" href="index.html">
-<span class="material-symbols-outlined text-[20px] md:text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
-<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Dashboard</span>
+<!-- Footer -->
+<footer class="py-12 border-t border-on-surface/8 text-center">
+<p class="font-display-lg text-headline-md text-primary/40 mb-4">My Reset HQ</p>
+<p class="font-label-sm text-on-surface-variant/40 uppercase tracking-widest">© 2024 Digital Sanctuary • Project Hub v1.0</p>
+</footer>
+<!-- SideNavBar (Mobile Bottom Bar Pivot) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-md border-t border-on-surface/8 px-6 py-4 flex justify-around items-center z-50">
+<a class="text-primary flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Hub</span>
 </a>
-<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="weekly.html">
-<span class="material-symbols-outlined text-[20px] md:text-[24px]">calendar_month</span>
-<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Weekly</span>
+<a class="text-on-surface-variant/30 flex flex-col items-center gap-1" href="index.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Main</span>
 </a>
-<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="wellness.html">
-<span class="material-symbols-outlined text-[20px] md:text-[24px]">energy_savings_leaf</span>
-<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Wellness</span>
+<a class="text-on-surface-variant/30 flex flex-col items-center gap-1" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Edit</span>
 </a>
-<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="work.html">
-<span class="material-symbols-outlined text-[20px] md:text-[24px]">work</span>
-<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Work</span>
-</a>
-<a class="flex flex-col items-center justify-center text-deep-brown/40 px-3 md:px-4 py-2 hover:text-primary transition-all duration-200" href="progress.html">
-<span class="material-symbols-outlined text-[20px] md:text-[24px]">bar_chart</span>
-<span class="font-label-sm text-[10px] md:text-[11px] font-medium mt-0.5">Progress</span>
-</a>
-</div>
 </nav>
-</div>
-
-
 </body></html>
